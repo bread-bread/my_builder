@@ -5,13 +5,12 @@ module.exports = function() {
     let spriteGen = $.gulp.src('./source/images/icons/*.{png, gif}')
     .pipe($.gp.spritesmith({
         imgName: 'sprite.png',
-        cssName: 'sprite.css'
+        cssName: 'sprite.scss'
     }));
     let images = spriteGen.img
     .pipe($.gulp.dest($.config.root + '/assets/img'));
     let styles = spriteGen.css
-    .pipe($.gp.csso())
-    .pipe($.gulp.dest($.config.root + '/assets/css'));
+    .pipe($.gulp.dest('./source/style/common'));
     return images, styles;
   })
 };
