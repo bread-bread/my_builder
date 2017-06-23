@@ -1,0 +1,76 @@
+extends ../_template
+
+block variables
+  - var title = 'Мои работы'
+
+block user
+    .first-screen__title
+        .section-pic
+            img(src="./assets/img/icons/stars.svg" alt="stars").section-pic__image
+        .user.first-screen__user
+            .user__pic
+                img(src="./assets/img/content/avatar.jpeg" alt="Avatar").user__pic-img
+            .user__description
+                .user__name Решетнев Паша
+                .user__info Личный сайт веб разработчика
+    a(href="#" class="arrow first-screen__scroll")
+block content
+    section.section.works
+        .works__title
+            .works__title-wrap
+                .block-title мои работы
+        .slider
+            .slider__left
+                .slider__title
+                    .block-subtitle сайт школы онлайн образования
+                .slider__tech html, css, javascript
+                a(class="slider__link" href="#")
+                    span.slider__icon-wrap
+                        svg.slider__icon
+                            use(xlink:href="./assets/img/icons/sprite.svg#link")
+                    span Посмотреть сайт
+            .slider__right
+                .slider__preview
+                    img(src="./assets/img/content/preview_1.jpeg")
+                .slider__controls
+                    .slider__controls-left
+                        .slider__controls-down
+                            svg.slider__controls-icon
+                                use(xlink:href="./assets/img/icons/sprite.svg#portf_arrow_down")
+                    .slider__controls-right
+                        .slider__controls-up
+                            svg.slider__controls-icon
+                                use(xlink:href="./assets/img/icons/sprite.svg#portf_arrow_up")
+    section.section.callback
+        .callback__title
+            .callback__title-wrap
+                .block-title что обо мне говорят
+        ul.review
+            li.review__item
+                .review__pic
+                    img.review__img
+                .review__text.text-content
+                    p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                .review__author.text-content Ковальчук Дмитрий
+                .review__author-occup.text-content - основатель Loftschool
+            li.review__item
+                .review__pic
+                    img.review__img
+                .review__text.text-content
+                    p Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+                .review__author.text-content Сабанцев Владимир
+                .review__author-occup.text-content - преподаватель
+        .form-wrap
+            .form__title
+                .block-subtitle связаться со мной
+            form.form
+                .form__wrap
+                    input(class="form__input" type="text" name="name" placeholder="Ваше имя")
+                .form__wrap
+                    input(class="form__input" type="email" name="email" placeholder="Ваш email")
+                .form__wrap
+                    textarea(class="form__input" name="message" placeholder="Ваше сообщение")
+                .form__wrap-btn
+                    input(class="form__submit" type="submit" value="Отправить")
+                    input(class="form__reset" type="reset" value="Очистить")
+        a(href="#" class="arrow callback__scroll")

@@ -1,0 +1,17 @@
+mixin skills(title, skills)
+  li.skills-circle__item
+    .skills-row
+      .skills-row__title #{title}
+        ul.skills-row__list
+          each skill in skills
+            li.skills-row__item
+              .skill
+                svg.skill__icon
+                .skill__title #{skill}
+mixin socials(items, className)
+  ul(class=`socials ${className}`)
+    each item in items
+      li.socials__item
+        a(href="" class="socials__link")
+          svg.socials__icon
+            use(xlink:href=`./assets/img/icons/sprite.svg#${item}`)

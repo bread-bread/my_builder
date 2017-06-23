@@ -1,0 +1,58 @@
+extends ../_template
+include ../common/_mixins.pug
+
+block variables
+  - var title = 'Обо мне'
+  - var contacts = [['skype', '_'],['mail', 'p.reshetnev@yandex.ru'],['phone', '+79117813559'],['mark', 'Санкт-Петербург']]
+
+block user
+  .first-screen__title
+    .section-pic
+      img(src="./assets/img/icons/stars.svg" alt="stars").section-pic__image
+    .user.first-screen__user
+      .user__pic
+        img(src="./assets/img/content/avatar.jpeg" alt="Avatar").user__pic-img
+      .user__description
+        .user__name Решетнев Паша
+        .user__info Личный сайт веб разработчика
+  a(href="#" class="arrow first-screen__scroll")
+block content
+  section.section.about
+    .about__me
+      .triangle.triangle_fill_beige
+      .about__me-title
+        .block-title Обо мне
+      .about__me-content
+        .user-desc
+          .user-desc__pic
+            img.user-desc__img
+          .user-desc__title
+            .block-subtitle Кто я
+          .user-desc__text.text-content
+            p Я веб разработкчик из Санкт-Петербурга. Мне 27 лет. Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные проекты.
+            p Этот сайт я делал в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освеэу в нем свой контент. А пока посмотрите как тут все классно и красиво!
+    .about__skills
+      .triangle.triangle_fill_lighter
+      .about__skills-title
+        .block-subtitle Чем я могу быть вам полезен
+      .about__skills-text.text-content
+        p Больше всего меня привлекает Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+      .about__skills-content
+        ul.skills-circle
+          +skills('Frontend', ['HTML5', 'CSS3', 'JavaScript & jQuery'])
+          +skills('Backend', ['PHP', 'mySQL', 'Node.js & npm', 'Mongo.db'])
+          +skills('WorkFlow', ['Git', 'Gulp', 'Yarn'])
+  section.section.map
+    .google-map
+    .map__contacts
+      .contacts
+        .contacts__title
+          .block-subtitle
+        ul.contacts__list
+          each contact in contacts
+            li.contacts__item
+              .contacts-row
+                .contacts-row__icon-wrap
+                  svg.contacts-row__icon
+                    use(xlink:href=`./assets/img/sprite.svg#${contact[0]}`)
+                .contacts-row__content #{contact[1]}

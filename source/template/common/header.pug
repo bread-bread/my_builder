@@ -1,0 +1,9 @@
+ul.socials
+    each item in ['vk', 'github', 'in']
+        li.socials__item
+            a(href="" class="socials__link")
+                svg.socials__icon
+                    use(xlink:href=`./assets/img/icons/sprite.svg#${item}`)
+a(class="nav-trigger" href="#")
+    svg.nav-trigger__icon
+        use(xlink:href="./assets/img/icons/sprite.svg#hamburger")
