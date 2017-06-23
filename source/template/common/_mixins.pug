@@ -8,10 +8,3 @@ mixin skills(title, skills)
               .skill
                 svg.skill__icon
                 .skill__title #{skill}
-mixin socials(items, className)
-  ul(class=`socials ${className}`)
-    each item in items
-      li.socials__item
-        a(href="" class="socials__link")
-          svg.socials__icon
-            use(xlink:href=`./assets/img/icons/sprite.svg#${item}`)
