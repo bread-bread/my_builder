@@ -27,11 +27,13 @@ block content
         svg.triangle__svg(viewBox="0 0 1000 150" preserveAspectRatio="none")
           polygon(points="0,0 0,150 1000,150")
       .about__me-title
+        .block-title__substrate
+          img.block-title__substrate-icon(src="./assets/img/decor/stars2.svg")
         .block-title Обо мне
       .about__me-content
         .user-desc
           .user-desc__pic
-            img.user-desc__img
+            img.user-desc__img(src="./assets/img/content/avatar.jpg")
           .user-desc__title
             .block-subtitle Кто я
           .user-desc__text.text-content
@@ -41,15 +43,16 @@ block content
       .triangle.triangle_fill_lighter
         svg.triangle__svg(viewBox="0 0 1000 150" preserveAspectRatio="none")
           polygon(points="1000,0 1000,150 0,150")
-      .about__skills-title
-        .block-subtitle Чем я могу быть вам полезен
-      .about__skills-text.text-content
-        p Больше всего меня привлекает Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
-      .about__skills-content
-        ul.skills-circle
-          +skills('Frontend', ['HTML5', 'CSS3', 'JavaScript & jQuery'])
-          +skills('Backend', ['PHP', 'mySQL', 'Node.js & npm', 'Mongo.db'])
-          +skills('WorkFlow', ['Git', 'Gulp', 'Yarn'])
+      .about__skills-container
+        .about__skills-title
+          .block-subtitle Чем я могу быть вам полезен
+        .about__skills-text.text-content
+          p Больше всего меня привлекает Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+        .about__skills-content
+          ul.skills-circle
+            +skills('Frontend', ['HTML5', 'CSS3', 'JavaScript & jQuery'])
+            +skills('Backend', ['PHP', 'mySQL', 'Node.js & npm', 'Mongo.db'])
+            +skills('WorkFlow', ['Git', 'Gulp', 'Yarn'])
   section.section.map
     .google-map
     .map__contacts
