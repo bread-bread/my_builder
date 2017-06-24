@@ -3,23 +3,29 @@ include ../common/_mixins.pug
 
 block variables
   - var title = 'Обо мне'
-  - var contacts = [['skype', '_'],['mail', 'p.reshetnev@yandex.ru'],['phone', '+79117813559'],['mark', 'Санкт-Петербург']]
+  - var contacts = [['skype_n', '_'],['envelope_n', 'p.reshetnev@yandex.ru'],['phone_n', '+79117813559'],['map_n', 'Санкт-Петербург']]
 
+block bg
+  img.first-screen__bg(src="./assets/img/decor/bg_about.jpg")
 block user
   .first-screen__title
     .section-pic
-      img(src="./assets/img/icons/stars.svg" alt="stars").section-pic__image
+      img(src="./assets/img/decor/stars1.svg" alt="stars").section-pic__image
     .user.first-screen__user
       .user__pic
-        img(src="./assets/img/content/avatar.jpeg" alt="Avatar").user__pic-img
+        img(src="./assets/img/content/avatar.jpg" alt="Avatar").user__pic-img
       .user__description
         .user__name Решетнев Паша
         .user__info Личный сайт веб разработчика
-  a(href="#" class="arrow first-screen__scroll")
+  .arrow.first-screen__scroll
+    svg.arrow__pic
+      use(xlink:href="./assets/img/icons/sprite.svg#arrow_down")
 block content
   section.section.about
     .about__me
       .triangle.triangle_fill_beige
+        svg.triangle__svg(viewBox="0 0 1000 150" preserveAspectRatio="none")
+          polygon(points="0,0 0,150 1000,150")
       .about__me-title
         .block-title Обо мне
       .about__me-content
@@ -33,6 +39,8 @@ block content
             p Этот сайт я делал в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освеэу в нем свой контент. А пока посмотрите как тут все классно и красиво!
     .about__skills
       .triangle.triangle_fill_lighter
+        svg.triangle__svg(viewBox="0 0 1000 150" preserveAspectRatio="none")
+          polygon(points="1000,0 1000,150 0,150")
       .about__skills-title
         .block-subtitle Чем я могу быть вам полезен
       .about__skills-text.text-content
@@ -54,5 +62,5 @@ block content
               .contacts-row
                 .contacts-row__icon-wrap
                   svg.contacts-row__icon
-                    use(xlink:href=`./assets/img/sprite.svg#${contact[0]}`)
+                    use(xlink:href=`./assets/img/icons/sprite.svg#${contact[0]}`)
                 .contacts-row__content #{contact[1]}

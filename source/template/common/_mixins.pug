@@ -2,9 +2,9 @@ mixin skills(title, skills)
   li.skills-circle__item
     .skills-row
       .skills-row__title #{title}
-        ul.skills-row__list
-          each skill in skills
-            li.skills-row__item
-              .skill
-                svg.skill__icon
-                .skill__title #{skill}
+      ul.skills-row__list
+        each skill in skills
+          li.skills-row__item
+            .skill
+              svg.skill__icon
+              .skill__title #{skill}

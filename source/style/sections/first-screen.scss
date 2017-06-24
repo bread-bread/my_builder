@@ -1,0 +1,32 @@
+.first-screen {
+    overflow: hidden;
+}
+.first-screen__bg {
+    width: 1920px;
+    position: absolute;
+    display: block;
+}
+.first-screen__container {
+    position: relative;
+    height: 100%;
+}
+.first-screen__title {
+  right: 0;
+  left: 0;
+  text-align: center;
+  @include centered(y);
+}
+.first-screen__user {
+    text-align: center;
+    @include centered();
+}
+.first-screen__scroll {
+    bottom: 50px;
+    @include centered(x);
+}
+.arrow__pic {
+    width: 28px;
+    height: 16px;
+    fill: #fff;
+    opacity: 0.5;
+}

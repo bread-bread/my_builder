@@ -1,0 +1,14 @@
+.about {
+    @extend %clearfix;
+}
+.about__me,
+.about__skills {
+    width: 50%;
+    float: left;
+}
+.about__me {
+    background-color: $beige;
+}
+.about__skills {
+    background-color: $lighter_beige;
+}

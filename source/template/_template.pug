@@ -25,9 +25,11 @@ html
 
   body
     section.section.first-screen
-      .first-screen__socials
-        include ./common/header
-      block user
+      block bg
+      .first-screen__container
+        .first-screen__socials
+          include ./common/header
+        block user
     block content
     footer.footer
       include ./common/footer-main

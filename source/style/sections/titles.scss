@@ -1,0 +1,16 @@
+.block-title {
+  font-size: $title_size;
+  color: $main_font_color;
+  @include webissimo();
+  padding: 45px 85px;
+  position: relative;
+  display: inline-block;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.block-subtitle {
+    font-size: $subtitle_size;
+    color: $main_font_color;
+    @include roboto(medium);
+}

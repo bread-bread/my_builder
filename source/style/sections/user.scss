@@ -1,0 +1,23 @@
+.section-pic__image {
+    width: 460px;
+    opacity: 0.1;
+}
+.user__pic {
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    width: 147px;
+    height: 147px;
+}
+.user__pic-img {
+    height: 220px;
+}
+.user__name {
+    @include roboto(medium);
+    font-size: 35px;
+    color: #fff;
+}
+.user__info {
+    @include roboto(regular);
+    color: #fff;
+}

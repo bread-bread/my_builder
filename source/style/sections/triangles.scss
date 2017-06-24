@@ -1,0 +1,20 @@
+.triangle {
+    position: absolute;
+    bottom: 100%;
+    width: 50%;
+    height: 150px;
+    display: block;
+    &_fill {
+        &_lighter {
+            fill: $lighter_beige;
+        }
+        &_beige {
+            fill: $beige;
+        }
+    }
+}
+.triangle__svg {
+    height: 100%;
+    width: 100%;
+    fill: inherit;
+}

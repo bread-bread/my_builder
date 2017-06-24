@@ -1,5 +1,17 @@
-body {
-  margin: 0;
-}
+//- -variables
+//- font 
+$main_size: 16px;
+$title_size: 63px;
+$subtitle_size: 35px;
+//- main colors
+$main_font_color: #474b57;
+$blue: #004cd1;
+$beige: #f2f0e8;
+$lighter_beige: #f4f5f0;
+// layout
+@import 'mixins/mixins';
+@import 'layout/settings';
+@import 'layout/font';
 
-@import 'common/header';
+@import 'common/**/*.*';
+@import 'sections/**/*.*';
