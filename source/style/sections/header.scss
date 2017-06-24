@@ -1,0 +1,27 @@
+.first-screen__socials {
+    @extend %clearfix;
+}
+.socials {
+    float: left;
+    margin: 31px 0 0 31px;
+    &__item {
+        display: inline-block;
+        font-size: 0;
+        vertical-align: middle;
+        margin-right: 20px;
+    }
+    &__icon {
+        width: 30px;
+        height: 20px;
+        fill: #fff;
+    }
+}
+.nav-trigger {
+    float: right;
+    margin: 28px 28px 0 0;
+}
+.nav-trigger__icon {
+    width: 42px;
+    height: 35px;
+    fill: #fff;
+}

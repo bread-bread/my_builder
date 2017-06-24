@@ -1,0 +1,29 @@
+.circles {
+  fill: none;
+  stroke-width: 20;
+  width: 110px;
+  height: 110px;
+}
+.circle__first {
+  stroke: #dfdcd5;
+}
+.circle__second {
+  stroke: $blue;
+  stroke-dasharray: .0010 282.6;
+  transition: all 1s;
+}
+.circle-55 {
+   stroke-dasharray: 155.43 282.6;
+}
+.skill {
+  display: inline-block;
+  position: relative;
+}
+.skill__title {
+    @include centered();
+    font-size: 13px;
+    @include roboto(medium);
+    text-align: center;
+    width: 62px;
+    overflow: hidden;
+}
