@@ -1,4 +1,4 @@
-# Training assembly from Loftschool
+# Portfolio
 
 > This assembly works with gulp version 4.0. 
 

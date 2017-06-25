@@ -55,18 +55,17 @@ block content
             +skills('WorkFlow', ['Git', 'Gulp', 'Yarn'])
   section.section.map
     .google-map
-    .map__contacts
-      .contacts
-        .contacts__title
-          .block-subtitle контакты
-        ul.contacts__list
-          each contact in contacts
-            li.contacts__item
-              .contacts-row
-                .contacts-row__icon-wrap
-                  svg.contacts-row__icon
-                    use(xlink:href=`./assets/img/icons/sprite.svg#${contact[0]}`)
-                .contacts-row__content #{contact[1]}
-    footer.footer
-        include ../common/footer-main
-        include ../common/footer-copyright
+    .contacts
+      .contacts__title
+        .block-subtitle контакты
+      ul.contacts__list
+        each contact in contacts
+          li.contacts__item
+            .contacts-row
+              .contacts-row__icon-wrap
+                svg.contacts-row__icon
+                  use(xlink:href=`./assets/img/icons/sprite.svg#${contact[0]}`)
+              .contacts-row__content #{contact[1]}
+  footer.footer
+    include ../common/footer-main
+    include ../common/footer-copyright

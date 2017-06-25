@@ -1,0 +1,16 @@
+extends ../_template
+
+block variables
+  - var title = 'Блог'
+block bg
+    img.first-screen__bg(src="./assets/img/decor/bg.jpg")
+block user
+    .first-screen__title
+        .section-pic
+            img(src="./assets/img/decor/stars1.svg" alt="stars").section-pic__image
+        .user.first-screen__user
+            .user__pic
+                img(src="./assets/img/content/avatar.jpg" alt="Avatar").user__pic-img
+            .user__description
+                .blog-title блог
+                .blog-title__desc Личный сайт веб разработчика

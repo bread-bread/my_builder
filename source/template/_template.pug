@@ -24,10 +24,12 @@ html
     <![endif]-->
 
   body
-    section.section.first-screen
+    .wrapper
       block bg
-      .first-screen__container
-        .first-screen__socials
-          include ./common/header
-        block user
-    block content
+      section.section.first-screen
+        //- block bg
+        .first-screen__container
+          .first-screen__socials
+            include ./common/header
+          block user
+      block content

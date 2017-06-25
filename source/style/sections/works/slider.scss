@@ -1,6 +1,6 @@
 .slider {
     @extend %clearfix;
-    height: 100%;
+    height: 80%;
 }
 .slider__left,
 .slider__right {
@@ -42,4 +42,49 @@
     width: 20px;
     height: 20px;
     fill: #fff;
+}
+.slider__right {
+    background-color: #e3e2de;
+}
+.slider__preview {
+    height: 70%;
+    background-image: url('./../img/content/slider_preview.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.slider__controls {
+    height: 30%;
+    @extend %clearfix;
+}
+.slider__controls-left,
+.slider__controls-right {
+    width: 50%;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+.slider__controls-left {
+    background-image: url('./../img/content/slider_preview.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+}
+.slider__controls-right {
+    & .slider__controls-icon-wrap {
+        background-color: rgba(#7e7f8a, .7);
+    }
+    background-image: url('./../img/content/slider_preview.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+}
+.slider__controls-icon-wrap {
+    height: 100%;
+    background-color: rgba(#aaabb7, .7);
+}
+.slider__controls-icon {
+    width: 45px;
+    height: 30px;
+    fill: #fff;
+    @include centered();
 }

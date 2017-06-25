@@ -3,7 +3,7 @@ extends ../_template
 block variables
   - var title = 'Мои работы'
 block bg
-  img.first-screen__bg(src="./assets/img/decor/bg_about.jpg")
+    img.first-screen__bg(src="./assets/img/decor/bg.jpg")
 block user
     .first-screen__title
         .section-pic
@@ -39,20 +39,20 @@ block content
                         span Посмотреть сайт
             .slider__right
                 .slider__preview
-                    img(src="./assets/img/content/preview_1.jpeg")
                 .slider__controls
-                    .slider__controls-left
-                        .slider__controls-down
+                    a.slider__controls-left(href="#")
+                        .slider__controls-icon-wrap
                             svg.slider__controls-icon
                                 use(xlink:href="./assets/img/icons/sprite.svg#portf_arrow_down")
-                    .slider__controls-right
-                        .slider__controls-up
+                    a.slider__controls-right(href="#")
+                        .slider__controls-icon-wrap
                             svg.slider__controls-icon
                                 use(xlink:href="./assets/img/icons/sprite.svg#portf_arrow_up")
     section.section.callback
         .callback__title
-            .callback__title-wrap
-                .block-title что обо мне говорят
+            .callback__title__substrate
+                img.callback__title__substrate-icon(src="./assets/img/decor/stars3.svg")
+            .block-title.block-title__white что обо мне говорят
         ul.review
             li.review__item
                 .review__pic
@@ -77,8 +77,11 @@ block content
                 .form__wrap
                     input(class="form__input" type="email" name="email" placeholder="Ваш email")
                 .form__wrap
-                    textarea(class="form__input" name="message" placeholder="Ваше сообщение")
+                    textarea(class="form__input text-area" name="message" placeholder="Ваше сообщение")
                 .form__wrap-btn
                     input(class="form__submit" type="submit" value="Отправить")
                     input(class="form__reset" type="reset" value="Очистить")
         a(href="#" class="arrow callback__scroll")
+    footer.footer
+        include ../common/footer-main
+        include ../common/footer-copyright
