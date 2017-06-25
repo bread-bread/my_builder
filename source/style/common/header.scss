@@ -2,8 +2,6 @@
     @extend %clearfix;
 }
 .socials {
-    float: left;
-    margin: 31px 0 0 31px;
     &__item {
         display: inline-block;
         font-size: 0;
@@ -15,6 +13,10 @@
         height: 20px;
         fill: #fff;
     }
+}
+.socials_float_margin {
+    float: left;
+    margin: 31px 0 0 31px;
 }
 .nav-trigger {
     float: right;

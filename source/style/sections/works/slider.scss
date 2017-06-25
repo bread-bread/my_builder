@@ -1,0 +1,45 @@
+.slider {
+    @extend %clearfix;
+    height: 100%;
+}
+.slider__left,
+.slider__right {
+    width: 50%;
+    float: left;
+    height: 100%;
+}
+.slider__left {
+    background-color: $beige;
+    position: relative;
+}
+.slider__left-wrap {
+    width: 380px;
+    text-align: center;
+    @include centered();
+}
+.slider__title {
+    margin-bottom: 30px;
+}
+.slider__tech {
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    @include roboto(medium);
+}
+.slider__link {
+    background-color: $blue;
+    padding: 12px 20px;
+    color: #fff;
+    @include roboto(regular);
+    box-sizing: border-box;
+    display: inline-block;
+}
+.slider__link-icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 12px;
+}
+.slider__link-icon {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+}

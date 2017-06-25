@@ -58,7 +58,7 @@ block content
     .map__contacts
       .contacts
         .contacts__title
-          .block-subtitle
+          .block-subtitle контакты
         ul.contacts__list
           each contact in contacts
             li.contacts__item
@@ -67,3 +67,6 @@ block content
                   svg.contacts-row__icon
                     use(xlink:href=`./assets/img/icons/sprite.svg#${contact[0]}`)
                 .contacts-row__content #{contact[1]}
+    footer.footer
+        include ../common/footer-main
+        include ../common/footer-copyright

@@ -1,0 +1,39 @@
+.contacts {
+  background-color: rgba(255, 255, 255, .7);
+  width: 580px;
+  height: 293px;
+  @include centered();
+  box-sizing: border-box;
+  padding: 20px;
+}
+.contacts__title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.contacts__list {
+    font-size: 0;
+}
+.contacts__item {
+    display: inline-block;
+    width: 50%;
+    margin-bottom: 30px;
+}
+.contacts-row__icon-wrap {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.contacts-row__icon {
+    width: 50px;
+    height: 50px;
+    fill: $blue;
+}
+
+.contacts-row__content {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: $main_size;
+    @include roboto(medium);
+    color: #474b57;
+    opacity: 0.8;
+}

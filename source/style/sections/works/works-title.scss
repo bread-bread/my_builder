@@ -1,0 +1,26 @@
+.works__triangle {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    bottom: 100%;
+}
+.works__triangle-svg {
+    width: 100%;
+    height: 100px;
+    fill: #0d1120;
+    opacity: 0.85;
+}
+
+.works__title {
+    position: relative;
+    height: 185px;
+    background-color: rgba(#0d1120, .85);
+}
+.works__title-substrate {
+    text-align: center;
+}
+.works__title-substrate-icon {
+    transform: rotate(190deg);
+    height: 185px;
+    opacity: 0.3;
+}

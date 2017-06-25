@@ -2,33 +2,41 @@ extends ../_template
 
 block variables
   - var title = 'Мои работы'
-
+block bg
+  img.first-screen__bg(src="./assets/img/decor/bg_about.jpg")
 block user
     .first-screen__title
         .section-pic
-            img(src="./assets/img/icons/stars.svg" alt="stars").section-pic__image
+            img(src="./assets/img/decor/stars1.svg" alt="stars").section-pic__image
         .user.first-screen__user
             .user__pic
-                img(src="./assets/img/content/avatar.jpeg" alt="Avatar").user__pic-img
+                img(src="./assets/img/content/avatar.jpg" alt="Avatar").user__pic-img
             .user__description
                 .user__name Решетнев Паша
                 .user__info Личный сайт веб разработчика
-    a(href="#" class="arrow first-screen__scroll")
+    .arrow.first-screen__scroll
+        svg.arrow__pic
+            use(xlink:href="./assets/img/icons/sprite.svg#arrow_down")
 block content
     section.section.works
+        .works__triangle
+            svg.works__triangle-svg(viewBox="0 0 2000 150" preserveAspectRatio="none")
+                polygon(points="2000,150 2000,0 1000,150 0,0 0,150")
         .works__title
-            .works__title-wrap
-                .block-title мои работы
+            .works__title-substrate
+                img.works__title-substrate-icon(src="./assets/img/decor/stars2.svg")
+            .block-title.block-title__white мои работы
         .slider
             .slider__left
-                .slider__title
-                    .block-subtitle сайт школы онлайн образования
-                .slider__tech html, css, javascript
-                a(class="slider__link" href="#")
-                    span.slider__icon-wrap
-                        svg.slider__icon
-                            use(xlink:href="./assets/img/icons/sprite.svg#link")
-                    span Посмотреть сайт
+                .slider__left-wrap
+                    .slider__title
+                        .block-subtitle сайт школы онлайн образования
+                    .slider__tech html, css, javascript
+                    a(class="slider__link" href="#")
+                        span.slider__link-icon-wrap
+                            svg.slider__link-icon
+                                use(xlink:href="./assets/img/icons/sprite.svg#link")
+                        span Посмотреть сайт
             .slider__right
                 .slider__preview
                     img(src="./assets/img/content/preview_1.jpeg")

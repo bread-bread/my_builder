@@ -2,14 +2,12 @@
   font-size: $title_size;
   color: $main_font_color;
   @include webissimo();
-  position: absolute;
-  top: 50%;
   @include centered();
   display: inline-block;
   text-transform: uppercase;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: contain;
+}
+.block-title__white {
+  color: #fff;
 }
 .block-title__substrate-icon {
     width: 185px;
