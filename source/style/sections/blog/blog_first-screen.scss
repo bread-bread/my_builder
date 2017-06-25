@@ -1,0 +1,13 @@
+.blog {
+    height: 400px;
+    min-height: 400px;
+}
+.blog__title {
+    text-transform: uppercase;
+    font-size: $title_size;
+    color: #fff;
+    @include webissimo();
+}
+.blog__subtitle {
+    color: #fff;
+}

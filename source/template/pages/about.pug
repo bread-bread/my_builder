@@ -5,22 +5,24 @@ block variables
   - var title = 'Обо мне'
   - var contacts = [['skype_n', '_'],['envelope_n', 'p.reshetnev@yandex.ru'],['phone_n', '+79117813559'],['map_n', 'Санкт-Петербург']]
 
-block bg
-  img.first-screen__bg(src="./assets/img/decor/bg_about.jpg")
-block user
-  .first-screen__title
-    .section-pic
-      img(src="./assets/img/decor/stars1.svg" alt="stars").section-pic__image
-    .user.first-screen__user
-      .user__pic
-        img(src="./assets/img/content/avatar.jpg" alt="Avatar").user__pic-img
-      .user__description
-        .user__name Решетнев Паша
-        .user__info Личный сайт веб разработчика
-  .arrow.first-screen__scroll
-    svg.arrow__pic
-      use(xlink:href="./assets/img/icons/sprite.svg#arrow_down")
 block content
+  img.first-screen__bg(src="./assets/img/decor/bg_about.jpg")
+  section.section.first-screen
+      .first-screen__container
+          .first-screen__socials
+              include ../common/header
+      .first-screen__title
+          .section-pic
+              img(src="./assets/img/decor/stars1.svg" alt="stars").section-pic__image
+          .user.first-screen__user
+              .user__pic
+                  img(src="./assets/img/content/avatar.jpg" alt="Avatar").user__pic-img
+              .user__description
+                  .user__name Решетнев Паша
+                  .user__info Личный сайт веб разработчика
+      .arrow.first-screen__scroll
+          svg.arrow__pic
+              use(xlink:href="./assets/img/icons/sprite.svg#arrow_down")
   section.section.about
     .about__me
       .triangle.triangle_fill_beige

@@ -2,22 +2,25 @@ extends ../_template
 
 block variables
   - var title = 'Мои работы'
-block bg
-    img.first-screen__bg(src="./assets/img/decor/bg.jpg")
-block user
-    .first-screen__title
-        .section-pic
-            img(src="./assets/img/decor/stars1.svg" alt="stars").section-pic__image
-        .user.first-screen__user
-            .user__pic
-                img(src="./assets/img/content/avatar.jpg" alt="Avatar").user__pic-img
-            .user__description
-                .user__name Решетнев Паша
-                .user__info Личный сайт веб разработчика
-    .arrow.first-screen__scroll
-        svg.arrow__pic
-            use(xlink:href="./assets/img/icons/sprite.svg#arrow_down")
+
 block content
+    img.first-screen__bg(src="./assets/img/decor/bg_about.jpg")
+    section.section.first-screen
+        .first-screen__container
+            .first-screen__socials
+                include ./../common/header
+        .first-screen__title
+            .section-pic
+                img(src="./assets/img/decor/stars1.svg" alt="stars").section-pic__image
+            .user.first-screen__user
+                .user__pic
+                    img(src="./assets/img/content/avatar.jpg" alt="Avatar").user__pic-img
+                .user__description
+                    .user__name Решетнев Паша
+                    .user__info Личный сайт веб разработчика
+        .arrow.first-screen__scroll
+            svg.arrow__pic
+                use(xlink:href="./assets/img/icons/sprite.svg#arrow_down")
     section.section.works
         .works__triangle
             svg.works__triangle-svg(viewBox="0 0 2000 150" preserveAspectRatio="none")

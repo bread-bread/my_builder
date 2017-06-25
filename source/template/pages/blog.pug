@@ -2,15 +2,54 @@ extends ../_template
 
 block variables
   - var title = 'Блог'
-block bg
-    img.first-screen__bg(src="./assets/img/decor/bg.jpg")
-block user
-    .first-screen__title
-        .section-pic
-            img(src="./assets/img/decor/stars1.svg" alt="stars").section-pic__image
-        .user.first-screen__user
-            .user__pic
-                img(src="./assets/img/content/avatar.jpg" alt="Avatar").user__pic-img
-            .user__description
-                .blog-title блог
-                .blog-title__desc Личный сайт веб разработчика
+block content
+    img.first-screen__bg(src="./assets/img/decor/blog_bg.jpg")
+    section.section.first-screen.blog
+        .first-screen__container
+            .first-screen__socials
+                include ./../common/header
+        .first-screen__title
+            .section-pic
+                img(src="./assets/img/decor/stars1.svg" alt="stars").section-pic__image
+            .user.first-screen__user
+                .user__pic
+                    img(src="./assets/img/content/avatar.jpg" alt="Avatar").user__pic-img
+                .user__description
+                    .blog__title блог
+                    .blog__subtitle Статьи которые я написал
+    section.section.articles
+        .articles__triangle
+            svg.articles__triangle-svg(viewBox="0 0 2000 100" preserveAspectRatio="none")
+                polygon(points="2000,100 2000,0 1000,100 0,0 0,100")
+        .articles__wrap
+            aside.sidebar
+                nav.side-nav
+                    ul.side-nav__list
+                        li.side-nav__item
+                            a(href="#" class="side-nav__link active") Пример статьи #1
+                        li.side-nav__item
+                            a(href="#" class="side-nav__link") Пример статьи #2
+                        li.side-nav__item
+                            a(href="#" class="side-nav__link") Пример статьи #3
+            main.articles__content
+                ul.articles__list
+                    li.articles__item
+                        article.article
+                            header.article__header
+                                .article__title Пример статьи #1
+                                .article__date 25 июня 2017
+                            .article__text
+                                p Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.
+                                p Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям. 
+                                img(src="./assets/img/content/blog_pic.jpg" class="article__pic")
+                    li.articles__item
+                        article.article
+                            header.article__header
+                                .article__title Пример статьи #2
+                                .article__date 26 июня 2017
+                            .article__text
+                                p Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.
+                                p Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
+    footer.footer
+        include ../common/footer-main
+        include ../common/footer-copyright

@@ -1,0 +1,63 @@
+.articles__triangle {
+    height: 100px;
+    position: absolute;
+    bottom: 100%;
+    width: 100%;
+    display: block;
+}
+.articles__triangle-svg {
+    height: 100px;
+    fill: $beige;
+    width: 100%;
+}
+.articles__wrap {
+    background-color: $beige;
+    @extend %clearfix;
+    padding: 110px 110px 65px 45px;
+}
+.sidebar {
+    width: 26%;
+    float: left;
+    text-align: right;
+}
+.side-nav__link {
+    padding: 13px 20px;
+    color: $main_font_color;
+    display: block;
+    border-right: 4px solid transparent;
+}
+.active {
+    color: $blue;
+    border-right: 4px solid $blue;
+    @include roboto(bold);
+}
+.articles__content {
+    width: 74%;
+    float: left;
+    padding-left: 100px;
+    box-sizing: border-box;
+}
+.articles__item {
+    margin-bottom: 70px;
+    padding-bottom: 70px;
+    border-bottom: 5px solid #ecebe4;
+    &:last-child {
+        margin: 0;
+        padding: 0;
+        border: none;
+    }
+}
+
+.article__title {
+    @include webissimo();
+    color: $main_font_color;
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+.article__date {
+    color: $blue;
+    opacity: 0.7;
+}
+.article__text {
+    line-height: 26px;
+}
