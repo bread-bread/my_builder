@@ -13,6 +13,7 @@
     width: 675px;
     margin: 0 auto;
     text-align: center;
+    margin-bottom: 15px;
 }
 .callback__title__substrate-icon {
     height: 170px;
@@ -29,12 +30,28 @@
     margin-right: 25px;
 }
 
-.review__text {
+.review__pic {
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    height: 75px;
+    width: 75px;
+}
+.review__img {
+    width: 80px;
+}
+.review__text,
+.review__author-occup {
     color: #fff;
     @include roboto(italic);
+}
+.review__text {
     text-align: left;
 }
-
+.review__author {
+    @include roboto(boldItalic);
+    color: #fff;
+}
 .form-wrap {
     width: 380px;
     margin: 0 auto;

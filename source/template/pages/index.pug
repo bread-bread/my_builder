@@ -40,8 +40,11 @@ html
                                     use(xlink:href=`./assets/img/icons/sprite.svg#${item}`)
                 .hello__btns
                     ul.btns
-                        each item in ['Мои работы', 'Обо мне', 'Блог']
-                            li.btns__item
-                                a.btns__link(href="#") #{item}
+                        li.btns__item
+                            a.btns__link(href="./works.html") Мои работы
+                        li.btns__item
+                            a.btns__link(href="./about.html") Обо мне
+                        li.btns__item
+                            a.btns__link(href="./blog.html") Блог
             footer.hello__footer.footer_transp
                 include ../common/footer-copyright

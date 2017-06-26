@@ -5,9 +5,11 @@
 .first-screen,
 .works,
 .about {
-  min-height: 800px;
   height: 100vh;
 }
 .map {
   height: 1115px;
+}
+.about {
+  min-height: 875px;
 }

@@ -8,9 +8,9 @@
             .footer-main__row
               nav.menu
                 ul.menu__list
-                  each item in ['Мои работы', 'Обо мне', 'Блог', 'Авторизация']
+                  each item in [['Мои работы', 'works.html'], ['Обо мне', 'about.html'], ['Блог', 'blog.html'], ['Авторизация', 'index.html']]
                     li.menu__item
-                      a(href="#" class="menu__link") #{item}
+                      a(href=`./${item[1]}` class="menu__link") #{item[0]}
             .footer-main__row
               ul.socials.socials_margin_color
                 each item in ['vk', 'github', 'in']
