@@ -1,9 +1,14 @@
+.contacts-wrap {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
 .contacts {
   background-color: rgba(255, 255, 255, .7);
   width: 580px;
   height: 293px;
-  @include centered();
-  box-sizing: border-box;
   padding: 20px;
 }
 .contacts__title {

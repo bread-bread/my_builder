@@ -1,50 +1,32 @@
-doctype html
-html
-  head
-    meta(charset="utf-8")
-    title #{title}
-    meta(content="" name="author")
-    meta(content="" name="description")
-    meta(content="" name="keywords")
-    meta(content="width=device-width, initial-scale=1" name="viewport")
-    meta(content="ie=edge" http-equiv="x-ua-compatible")
+extends ../_template
+include ../common/_mixins.pug
 
-    //- favicon block start
-    //- favicon block end
+block variables
+  - var title = 'Обо мне'
 
-    link(rel='stylesheet' href='/assets/css/foundation.css')
-    link(rel='stylesheet' href='/assets/css/app.css')
-    script(src='/assets/js/foundation.js' defer)
-    script(src='/assets/js/app.js' defer)
-
-    <!--[if lt IE 9]>
-    script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
-    <![endif]-->
-
-  body
-    .wrapper
-        img.first-screen__bg(src="./assets/img/decor/bg_about.jpg")
-        .hello-wrap
-            a.auth-btn(href="#") Авторизоваться
-            .hello
-                .user__pic
-                    img(src="./assets/img/content/avatar.jpg" alt="Avatar").user__pic-img
-                .user__description
-                    .user__name Решетнев Паша
-                    .user__info Личный сайт веб разработчика
-                ul.socials.socials_fill_blue
-                    each item in ['vk', 'github', 'in']
-                        li.socials__item
-                            a(href="" class="socials__link")
-                                svg.socials__icon
-                                    use(xlink:href=`./assets/img/icons/sprite.svg#${item}`)
-                .hello__btns
-                    ul.btns
-                        li.btns__item
-                            a.btns__link(href="./works.html") Мои работы
-                        li.btns__item
-                            a.btns__link(href="./about.html") Обо мне
-                        li.btns__item
-                            a.btns__link(href="./blog.html") Блог
-            footer.hello__footer.footer_transp
-                include ../common/footer-copyright
+block content
+    img.first-screen__bg(src="./assets/img/decor/bg_about.jpg")
+    .hello-wrap
+        a.auth-btn(href="#") Авторизоваться
+        .hello
+            .user__pic.user__pic_marginReset
+                img(src="./assets/img/content/avatar.jpg" alt="Avatar").user__pic-img
+            .user__description
+                .user__name.user__name_fontSize Решетнев Паша
+                .user__info Личный сайт веб разработчика
+            ul.socials.socials_fill_blue
+                each item in ['vk', 'github', 'in']
+                    li.socials__item
+                        a(href="" class="socials__link")
+                            svg.socials__icon
+                                use(xlink:href=`./assets/img/icons/sprite.svg#${item}`)
+            .hello__btns
+                ul.btns
+                    li.btns__item
+                        a.btns__link(href="./works.html") Мои работы
+                    li.btns__item
+                        a.btns__link(href="./about.html") Обо мне
+                    li.btns__item
+                        a.btns__link(href="./blog.html") Блог
+        footer.hello__footer.footer_transp
+            include ../common/footer-copyright

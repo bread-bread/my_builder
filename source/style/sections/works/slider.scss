@@ -1,28 +1,30 @@
 .slider {
-    @extend %clearfix;
-    height: 80%;
+    height: 100%;
+    width: 100%;
+    display: flex;
 }
 .slider__left,
 .slider__right {
     width: 50%;
-    float: left;
+    display: flex;
     height: 100%;
 }
 .slider__left {
     background-color: $beige;
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .slider__left-wrap {
     width: 380px;
     text-align: center;
-    @include centered();
 }
 .slider__title {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 .slider__tech {
     text-transform: uppercase;
-    margin-bottom: 60px;
+    margin-bottom: 55px;
     @include roboto(medium);
 }
 .slider__link {
@@ -45,6 +47,8 @@
 }
 .slider__right {
     background-color: #e3e2de;
+    flex-flow: column wrap;
+    align-items: stretch;
 }
 .slider__preview {
     height: 70%;
@@ -54,13 +58,12 @@
 }
 .slider__controls {
     height: 30%;
-    @extend %clearfix;
+    display: flex;
 }
 .slider__controls-left,
 .slider__controls-right {
     width: 50%;
     height: 100%;
-    float: left;
     position: relative;
 }
 .slider__controls-left {

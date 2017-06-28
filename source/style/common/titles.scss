@@ -2,25 +2,29 @@
   font-size: $title_size;
   color: $main_font_color;
   @include webissimo();
-  @include centered();
+  top: 0;
+  @include centered(x);
   display: inline-block;
   text-transform: uppercase;
 }
 .block-title__white {
   color: #fff;
+  @include centered();
+  line-height: 65px;
 }
 .block-title__substrate-icon {
     width: 185px;
-    height: 120px;
+    height: 133px;
     fill: #dbe0e6;
-    transform: rotate(180deg);
+    transform: rotate(190deg);
+    margin-top: -22px;
 }
 .block-subtitle {
     font-size: $subtitle_size;
     color: $main_font_color;
     @include webissimo();
     text-transform: uppercase;
-    padding: 0 20px 20px 20px;
+    padding: 0 20px 26px 20px;
     position: relative;
     &:after {
       content: '';
@@ -32,4 +36,7 @@
       display: block;
       background-color: $main_font_color;
     }
+}
+.block-subtitle_lineHeight {
+  line-height: 40px;
 }

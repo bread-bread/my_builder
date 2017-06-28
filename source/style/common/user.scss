@@ -1,13 +1,25 @@
+.section-pic {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    margin-top: -10px;
+    margin-left: -25px;
+}
 .section-pic__image {
     width: 460px;
     opacity: 0.1;
+
 }
 .user__pic {
     border-radius: 50%;
     overflow: hidden;
     display: inline-block;
-    width: 147px;
-    height: 147px;
+    width: 145px;
+    height: 145px;
+    margin-bottom: 10px;
+}
+.user__pic_marginReset {
+    margin-bottom: 0;
 }
 .user__pic-img {
     height: 220px;
@@ -16,6 +28,9 @@
     @include roboto(medium);
     font-size: 35px;
     color: #fff;
+}
+.user__name_fontSize {
+    font-size: 30px;
 }
 .user__info {
     @include roboto(regular);

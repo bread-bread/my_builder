@@ -2,14 +2,23 @@
   position: relative;
   height: 100%;
 }
-.first-screen,
-.works,
-.about {
+.first-screen {
   height: 100vh;
+  max-height: 980px;
 }
 .map {
-  height: 1115px;
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
 }
 .about {
-  min-height: 875px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+}
+.works {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100vh;
+  min-height: 935px;
 }

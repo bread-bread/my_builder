@@ -13,20 +13,26 @@
 .articles__wrap {
     background-color: $beige;
     @extend %clearfix;
-    padding: 110px 110px 65px 45px;
+    padding: 94px 108px 65px 45px;
 }
 .sidebar {
     width: 26%;
     float: left;
     text-align: right;
 }
+.side-nav {
+    margin-top: 12px;
+    &__item {
+        margin-bottom: 10px;
+    }
+}
 .side-nav__link {
-    padding: 13px 20px;
+    padding: 10px 20px;
     color: $main_font_color;
     display: block;
     border-right: 4px solid transparent;
 }
-.active {
+.side-nav__link_active {
     color: $blue;
     border-right: 4px solid $blue;
     @include roboto(bold);
@@ -34,12 +40,12 @@
 .articles__content {
     width: 74%;
     float: left;
-    padding-left: 100px;
+    padding-left: 93px;
     box-sizing: border-box;
 }
 .articles__item {
-    margin-bottom: 70px;
-    padding-bottom: 70px;
+    margin-bottom: 60px;
+    padding-bottom: 60px;
     border-bottom: 5px solid #ecebe4;
     &:last-child {
         margin: 0;
@@ -48,11 +54,14 @@
     }
 }
 
+.article__header {
+    margin-bottom: 20px;
+}
 .article__title {
     @include webissimo();
     color: $main_font_color;
     font-size: 35px;
-    margin-bottom: 30px;
+    margin-bottom: 13px;
 }
 .article__date {
     color: $blue;
@@ -60,4 +69,7 @@
 }
 .article__text {
     line-height: 26px;
+    p {
+        margin-bottom: 10px;
+    }
 }

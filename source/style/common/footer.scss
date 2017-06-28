@@ -1,22 +1,25 @@
 .footer {
     position: relative;
+}
+.footer_works {
+    position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
 }
 .container {
-    padding: 30px 30px 20px;
+    padding: 29px 30px 20px;
+    display: flex;
 }
 .footer-main {
     background-color: rgba(28, 31, 41, .85);
 }
 .footer-main__col {
-    display: inline-block;
-    vertical-align: top;
+    flex: 1 1 auto;
     &:nth-child(2) {
         position: relative;
-        padding: 0 30px;
-        margin: 0 30px;
+        padding: 0 35px 0 30px;
+        margin: 0 35px;
         height: 100%;
         &::before,
         &::after {
@@ -39,14 +42,15 @@
 .footer-main__text {
     @include roboto(light);
     color: #fff;
+    max-width: 350px;
 }
-.menu__list {
-    margin-bottom: 50px;
+.footer-main__row_margin {
+    margin-bottom: 40px;
 }
 .menu__item {
     display: inline-block;
-    margin-right: 40px;
-    &::last-child {
+    margin-right: 35px;
+    &:last-child {
         margin-right: 0;
     }
 }
@@ -61,7 +65,7 @@
 .footer-main__contacts-item {
     @include roboto(light);
     color: #fff;
-    margin-bottom: 10px;
+    margin-bottom: 4px;
     &:last-child {
         margin-bottom: 0;
     }

@@ -4,8 +4,6 @@
 .about__me,
 .about__skills {
     width: 50%;
-    float: left;
-    height: 100%;
 }
 .about__me {
     background-color: $beige;
@@ -13,14 +11,13 @@
 .about__me-title {
   position: relative;
   text-align: center;
-  margin-bottom: 15px;
 }
 .user-desc__pic {
     margin: 0 auto;
     width: 455px;
     height: 390px;
     overflow: hidden;
-    margin-bottom: 40px;
+    margin-bottom: 34px;
 }
 .user-desc__img {
     width: 485px;
@@ -35,9 +32,7 @@
     margin-bottom: 25px;
 }
 .text-content {
-    p {
-        margin: 0 0 15px 0;
-    }
+    
 }
 //- skills
 .about__skills {
@@ -50,22 +45,28 @@
     width: 355px;
     margin: 0 auto;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+}
+.about__skills-text {
+    margin-bottom: 48px;
+    p {
+        margin: 0;
+    }
 }
 
 .skills-circle__item {
-    margin-bottom: 40px;
+    margin-bottom: 26px;
 }
 
 .skills-row__title {
     @include roboto(medium);
     font-size: 28px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .skills-row__item {
     display: inline-block;
     font-size: 0;
-    margin-right: 40px;
+    margin-right: 32px;
     &:last-child {
         margin-right: 0;
     }

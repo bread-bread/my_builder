@@ -14,19 +14,28 @@
   right: 0;
   left: 0;
   text-align: center;
+  margin-top: -33px;
   @include centered(y);
+}
+.first-screen__title_posmargin {
+    margin-top: 10px;
 }
 .first-screen__user {
     text-align: center;
     @include centered();
 }
 .first-screen__scroll {
-    bottom: 50px;
+    bottom: 65px;
     @include centered(x);
+    z-index: 1;
+    transition: .3s;
+    opacity: 0.5;
+    &:hover {
+        opacity: 1;
+    }
 }
 .arrow__pic {
     width: 28px;
     height: 16px;
     fill: #fff;
-    opacity: 0.5;
 }

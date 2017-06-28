@@ -18,7 +18,7 @@ block content
                 .user__description
                     .user__name Решетнев Паша
                     .user__info Личный сайт веб разработчика
-        .arrow.first-screen__scroll
+        a.arrow.first-screen__scroll(href="#")
             svg.arrow__pic
                 use(xlink:href="./assets/img/icons/sprite.svg#arrow_down")
     section.section.works
@@ -33,7 +33,7 @@ block content
             .slider__left
                 .slider__left-wrap
                     .slider__title
-                        .block-subtitle сайт школы онлайн образования
+                        .block-subtitle.block-subtitle_lineHeight сайт школы онлайн образования
                     .slider__tech html, css, javascript
                     a(class="slider__link" href="#")
                         span.slider__link-icon-wrap
@@ -84,7 +84,9 @@ block content
                 .form__wrap-btn
                     input(class="form__submit" type="submit" value="Отправить")
                     input(class="form__reset" type="reset" value="Очистить")
-        a(href="#" class="arrow callback__scroll")
-    footer.footer
-        include ../common/footer-main
-        include ../common/footer-copyright
+        a.arrow.callback__scroll(href="#")
+            svg.arrow__pic
+                use(xlink:href="./assets/img/icons/sprite.svg#arrow_down")
+        footer.footer.footer_works
+            include ../common/footer-main
+            include ../common/footer-copyright

@@ -20,9 +20,9 @@ block content
               .user__description
                   .user__name Решетнев Паша
                   .user__info Личный сайт веб разработчика
-      .arrow.first-screen__scroll
-          svg.arrow__pic
-              use(xlink:href="./assets/img/icons/sprite.svg#arrow_down")
+      a.arrow.first-screen__scroll(href="#")
+        svg.arrow__pic
+          use(xlink:href="./assets/img/icons/sprite.svg#arrow_down")
   section.section.about
     .about__me
       .triangle.triangle_fill_beige
@@ -57,17 +57,18 @@ block content
             +skills('WorkFlow', ['Git', 'Gulp', 'Yarn'])
   section.section.map
     .google-map
-    .contacts
-      .contacts__title
-        .block-subtitle контакты
-      ul.contacts__list
-        each contact in contacts
-          li.contacts__item
-            .contacts-row
-              .contacts-row__icon-wrap
-                svg.contacts-row__icon
-                  use(xlink:href=`./assets/img/icons/sprite.svg#${contact[0]}`)
-              .contacts-row__content #{contact[1]}
-  footer.footer
-    include ../common/footer-main
-    include ../common/footer-copyright
+    .contacts-wrap
+      .contacts
+        .contacts__title
+          .block-subtitle контакты
+        ul.contacts__list
+          each contact in contacts
+            li.contacts__item
+              .contacts-row
+                .contacts-row__icon-wrap
+                  svg.contacts-row__icon
+                    use(xlink:href=`./assets/img/icons/sprite.svg#${contact[0]}`)
+                .contacts-row__content #{contact[1]}
+    footer.footer
+      include ../common/footer-main
+      include ../common/footer-copyright

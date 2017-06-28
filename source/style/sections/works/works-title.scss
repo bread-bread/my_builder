@@ -13,7 +13,8 @@
 
 .works__title {
     position: relative;
-    height: 20%;
+    height: 185px;
+    width: 100%;
     background-color: rgba(#0d1120, .85);
 }
 .works__title-substrate {
@@ -23,4 +24,5 @@
     transform: rotate(190deg);
     height: 185px;
     opacity: 0.3;
+    margin-right: 40px;
 }

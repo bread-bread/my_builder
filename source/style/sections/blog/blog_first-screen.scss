@@ -7,6 +7,8 @@
     font-size: $title_size;
     color: #fff;
     @include webissimo();
+    line-height: 65px;
+    margin-bottom: 10px;
 }
 .blog__subtitle {
     color: #fff;
