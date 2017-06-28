@@ -29,11 +29,23 @@
     display: inline-block;
     vertical-align: top;
     margin-right: 20px;
+    position: relative;
+    z-index: 1;
     &:last-child {
         margin-right: 0;
     }
 }
-
+.review__quotes {
+    z-index: -1;
+    position: absolute;
+    top: 70px;
+}
+.review__quotes-icon {
+    fill: #fff;
+    opacity: 0.1;
+    height: 60px;
+    width: 75px;
+}
 .review__pic {
     border-radius: 50%;
     overflow: hidden;
