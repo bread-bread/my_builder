@@ -30,7 +30,10 @@
     color: #fff;
 }
 .user__name_fontSize {
-    font-size: 30px;
+    font-size: 28px;
+    @include phone {
+        font-size: 21px;
+    }
 }
 .user__info {
     @include roboto(regular);

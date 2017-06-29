@@ -7,6 +7,10 @@
     &_fill {
         &_lighter {
             fill: $lighter_beige;
+            @include laptop {
+                right: 0;
+                fill: $beige;
+            }
         }
         &_beige {
             fill: $beige;

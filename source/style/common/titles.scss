@@ -1,11 +1,12 @@
 .block-title {
-  font-size: $title_size;
+  font-size: 63px;
   color: $main_font_color;
   @include webissimo();
   top: 0;
   @include centered(x);
   display: inline-block;
   text-transform: uppercase;
+  width: 100%;
 }
 .block-title__white {
   color: #fff;
@@ -18,9 +19,12 @@
     fill: #dbe0e6;
     transform: rotate(190deg);
     margin-top: -22px;
+    @include laptop {
+      margin-top: 0;
+    }
 }
 .block-subtitle {
-    font-size: $subtitle_size;
+    font-size: 35px;
     color: $main_font_color;
     @include webissimo();
     text-transform: uppercase;
