@@ -22,7 +22,8 @@
 }
 .first-screen__user {
     text-align: center;
-    @include centered();
+    @include centered(y);
+    width: 100%;
 }
 .first-screen__scroll {
     bottom: 65px;

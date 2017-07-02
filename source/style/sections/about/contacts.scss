@@ -4,12 +4,23 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    @include phone {
+        order: -1;
+    }
 }
 .contacts {
   background-color: rgba(255, 255, 255, .7);
   width: 580px;
   height: 293px;
   padding: 20px;
+  @include tablet {
+      width: 350px;
+      height: 375px;
+  }
+  @include phone {
+      width: 100%;
+      height: 295px;
+  }
 }
 .contacts__title {
     text-align: center;
@@ -22,6 +33,16 @@
     display: inline-block;
     width: 50%;
     margin-bottom: 30px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    @include tablet {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    @include phone {
+        margin-bottom: 10px;
+    }
 }
 .contacts-row__icon-wrap {
     display: inline-block;
@@ -29,9 +50,13 @@
     margin-right: 10px;
 }
 .contacts-row__icon {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     fill: $blue;
+    @include phone {
+        width: 35px;
+        height: 35px;
+    }
 }
 
 .contacts-row__content {

@@ -8,7 +8,11 @@
 .section-pic__image {
     width: 460px;
     opacity: 0.1;
-
+    @include tablet {
+        height: 170px;
+        margin-top: -65px;
+        margin-right: -35px;
+    }
 }
 .user__pic {
     border-radius: 50%;
@@ -28,14 +32,15 @@
     @include roboto(medium);
     font-size: 35px;
     color: #fff;
-}
-.user__name_fontSize {
-    font-size: 28px;
     @include phone {
         font-size: 21px;
     }
 }
+.user__name_fontSize {
+    font-size: 28px;
+}
 .user__info {
     @include roboto(regular);
     color: #fff;
+    width: 100%;
 }

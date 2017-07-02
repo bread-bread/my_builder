@@ -1,6 +1,11 @@
 .blog {
     height: 400px;
-    min-height: 400px;
+    @include tablet {
+        height: 505px;
+    }
+    @include phone {
+        height: 560px;
+    }
 }
 .blog__title {
     text-transform: uppercase;
@@ -9,6 +14,14 @@
     @include webissimo();
     line-height: 65px;
     margin-bottom: 10px;
+    @include tablet {
+        font-size: 49px;
+    }
+    @include phone {
+        font-size: 35px;
+        line-height: 35px;
+        margin-bottom: 20px;
+    }
 }
 .blog__subtitle {
     color: #fff;

@@ -4,9 +4,15 @@
     bottom: 100%;
     width: 100%;
     display: block;
+    @include tablet {
+        height: 70px;
+    }
+    @include phone {
+        height: 30px;
+    }
 }
 .articles__triangle-svg {
-    height: 100px;
+    height: 100%;
     fill: $beige;
     width: 100%;
 }
@@ -14,11 +20,23 @@
     background-color: $beige;
     @extend %clearfix;
     padding: 94px 108px 65px 45px;
+    @include laptop {
+        padding: 94px 37px 65px 37px;
+    }
+    @include tablet {
+        padding: 60px 25px 50px 25px;
+    }
+    @include phone {
+        padding: 35px 10px 30px 10px;
+    }
 }
 .sidebar {
     width: 26%;
     float: left;
     text-align: right;
+    @include tablet {
+        display: none;
+    }
 }
 .side-nav {
     margin-top: 12px;
@@ -43,6 +61,14 @@
     float: left;
     padding-left: 93px;
     box-sizing: border-box;
+    @include laptop {
+        padding-left: 40px;
+    }
+    @include tablet {
+        width: 100%;
+        padding: 0;
+        float: none;
+    }
 }
 .articles__item {
     margin-bottom: 60px;
@@ -52,6 +78,14 @@
         margin: 0;
         padding: 0;
         border: none;
+    }
+    @include tablet {
+        margin-bottom: 50px;
+        padding-bottom: 50px;
+    }
+    @include phone {
+        margin-bottom: 30px;
+        padding-bottom: 30px;
     }
 }
 
@@ -63,6 +97,12 @@
     color: $main_font_color;
     font-size: 35px;
     margin-bottom: 13px;
+    @include tablet {
+        font-size: 30px;
+    }
+    @include phone {
+        font-size: 21px;
+    }
 }
 .article__date {
     color: $blue;

@@ -2,16 +2,26 @@
   font-size: 63px;
   color: $main_font_color;
   @include webissimo();
-  top: 0;
-  @include centered(x);
+  left: 0;
+  @include centered(y);
   display: inline-block;
   text-transform: uppercase;
   width: 100%;
+  @include tablet {
+    font-size: 48px;
+  }
+  @include phone {
+    font-size: 35px;
+  }
 }
-.block-title__white {
+.block-title_white {
   color: #fff;
+  text-align: center;
   @include centered();
   line-height: 65px;
+  @include phone {
+    line-height: 42px;
+  }
 }
 .block-title__substrate-icon {
     width: 185px;
@@ -20,7 +30,13 @@
     transform: rotate(190deg);
     margin-top: -22px;
     @include laptop {
-      margin-top: 0;
+      margin-top: 15px;
+    }
+    @include tablet {
+      height: 120px;
+    }
+    @include phone {
+      display: none;
     }
 }
 .block-subtitle {
@@ -39,6 +55,16 @@
       height: 3px;
       display: block;
       background-color: $main_font_color;
+      @include phone {
+        width: 55px;
+      }
+    }
+    @include tablet {
+      font-size: 30px;
+      padding: 0 20px 20px 20px;
+    }
+    @include phone {
+      font-size: 21px;
     }
 }
 .block-subtitle_lineHeight {

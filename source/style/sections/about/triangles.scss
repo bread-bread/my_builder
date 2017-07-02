@@ -16,6 +16,12 @@
             fill: $beige;
         }
     }
+    @include tablet {
+        height: 70px;
+    }
+    @include phone {
+        height: 30px;
+    }
 }
 .triangle__svg {
     height: 100%;

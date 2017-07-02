@@ -10,15 +10,20 @@
   height: 100vh;
   display: flex;
   flex-flow: column nowrap;
+  @include phone {
+    height: auto;
+  }
 }
 .about {
   display: flex;
   flex-flow: row wrap;
   align-items: stretch;
 }
-.works {
-  display: flex;
-  flex-flow: column nowrap;
+.slider {
   height: 100vh;
-  min-height: 935px;
+  display: flex;
+  flex-flow: column wrap;
+  @include tablet {
+    flex-wrap: nowrap;
+  }
 }
