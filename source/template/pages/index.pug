@@ -5,28 +5,65 @@ block variables
   - var title = 'Обо мне'
 
 block content
-    img.first-screen__bg(src="./assets/img/decor/bg_about.jpg")
+    .hello-bg
+        .hello-bg__layer
+            video(loop muted autoplay class="hello-bg__video")
+                source(src="./assets/img/decor/night.mp4" type="video/mp4")
+        .hello-bg__layer
+            img.hello-bg__img(src="./assets/img/decor/night_no_bg.png")
     .hello-wrap
         a.auth-btn(href="#") Авторизоваться
-        .hello
-            .user__pic.user__pic_marginReset
-                img(src="./assets/img/content/avatar.jpg" alt="Avatar").user__pic-img
-            .user__description
-                .user__name.user__name_fontSize Решетнев Паша
-                .user__info Личный сайт веб разработчика
-            ul.socials.socials_fill_blue
-                each item in ['vk', 'github', 'in']
-                    li.socials__item
-                        a(href="" class="socials__link")
-                            svg.socials__icon
-                                use(xlink:href=`./assets/img/icons/sprite.svg#${item}`)
-            .hello__btns
-                ul.btns
-                    li.btns__item
-                        a.btns__link(href="./works.html") Мои работы
-                    li.btns__item
-                        a.btns__link(href="./about.html") Обо мне
-                    li.btns__item
-                        a.btns__link(href="./blog.html") Блог
+        .flipper-wrap
+            .flipper
+                .hello
+                    .user__pic.user__pic_marginReset
+                        img(src="./assets/img/content/avatar.jpg" alt="Avatar").user__pic-img
+                    .user__description
+                        .user__name.user__name_fontSize Решетнев Паша
+                        .user__info Личный сайт веб разработчика
+                    ul.socials.socials_fill_blue
+                        each item in ['vk', 'github', 'in']
+                            li.socials__item
+                                a(href="" class="socials__link")
+                                    svg.socials__icon
+                                        use(xlink:href=`./assets/img/icons/sprite.svg#${item}`)
+                    .hello__btns
+                        ul.btns
+                            li.btns__item
+                                a.btns__link(href="./works.html") Мои работы
+                            li.btns__item
+                                a.btns__link(href="./about.html") Обо мне
+                            li.btns__item
+                                a.btns__link(href="./blog.html") Блог
+                .auth
+                    .auth__title Авторизуйтесь
+                    .auth__form-wrap
+                        form.auth__form
+                            label.auth__input-label
+                                .auth__icon-wrap
+                                    svg.auth__icon
+                                        use(xlink:href = "./assets/img/icons/sprite.svg#login")
+                                input(class="auth__input" type="text" name="login" placeholder="Логин")
+                            label.auth__input-label
+                                .auth__icon-wrap
+                                    svg.auth__icon
+                                        use(xlink:href = "./assets/img/icons/sprite.svg#password")
+                                input(class="auth__input" type="password" name="password" placeholder="Пароль")
+                            label.auth__checkbox-label
+                                input(class="auth__checkbox" type="checkbox" name="human")
+                                .auth__checkbox-block
+                                .auth__checkbox-text Я человек
+                            .auth__radio-title Вы точно не робот?
+                            .auth__radio-wrap
+                                label.auth__radio-label
+                                    input(class="auth__radio" type="radio" name="humanity")
+                                    .auth__radio-block
+                                    .auth__radio-text Да
+                                label.auth__radio-label
+                                    input(class="auth__radio" type="radio" name="humanity")
+                                    .auth__radio-block
+                                    .auth__radio-text Не уверен
+                        a.auth__link(href="#") На главную
+                        a.auth__button(href="#") Войти
         footer.hello__footer.footer_transp
             include ../common/footer-copyright

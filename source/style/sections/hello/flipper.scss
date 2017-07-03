@@ -1,0 +1,26 @@
+.flipper-wrap {
+    perspective: 1000;
+    height: 410px;
+    width: 378px;
+}
+.clicked .flipper{
+    transform: rotateY(180deg);
+}
+.flipper {
+    transition: .6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+.hello,
+.auth {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.hello {
+    z-index: 2;
+}
+.auth {
+    transform: rotateY(180deg);
+}

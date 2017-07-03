@@ -1,9 +1,36 @@
 .first-screen {
     overflow: hidden;
 }
-.first-screen__bg {
+.first-screen__bg-normal {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include desctop {
+        display: block;
+    }
+}
+.first-screen__bg-img {
     width: 2400px;
+}
+.first-screen__bg-wrap {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 1270px;
+    @include desctop {
+        display: none;
+    }
+}
+.first-screen__bg {
+    max-width: 180%;
     display: block;
+}
+.first-screen__socials {
+    top: 0;
+    left: 0;
+    right: 0;
     position: absolute;
 }
 .first-screen__container {
@@ -21,9 +48,12 @@
     margin-top: 10px;
 }
 .first-screen__user {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    margin-top: -116px;
     text-align: center;
-    @include centered(y);
-    width: 100%;
 }
 .first-screen__scroll {
     bottom: 65px;

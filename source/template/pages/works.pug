@@ -4,20 +4,21 @@ block variables
   - var title = 'Мои работы'
 
 block content
-    img.first-screen__bg(src="./assets/img/decor/bg_about.jpg")
+    .first-screen__bg-normal
+        img.first-screen__bg-img(src="./assets/img/decor/bg_about.jpg")
+    .first-screen__bg-wrap
+        img.first-screen__bg(src="./assets/img/decor/bg.jpg")
     section.section.first-screen
-        .first-screen__container
-            .first-screen__socials
-                include ./../common/header
-        .first-screen__title
-            .section-pic
-                img(src="./assets/img/decor/stars1.svg" alt="stars").section-pic__image
-            .user.first-screen__user
-                .user__pic
-                    img(src="./assets/img/content/avatar.jpg" alt="Avatar").user__pic-img
-                .user__description
-                    .user__name Решетнев Паша
-                    .user__info Личный сайт веб разработчика
+        .first-screen__socials
+            include ./../common/header
+        .section-pic
+            img(src="./assets/img/decor/stars1.svg" alt="stars").section-pic__image
+        .user.first-screen__user
+            .user__pic
+                img(src="./assets/img/content/avatar.jpg" alt="Avatar").user__pic-img
+            .user__description
+                .user__name Решетнев Паша
+                .user__info Личный сайт веб разработчика
         a.arrow.first-screen__scroll(href="#")
             svg.arrow__pic
                 use(xlink:href="./assets/img/icons/sprite.svg#arrow_down")

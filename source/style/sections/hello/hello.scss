@@ -3,7 +3,36 @@
     position: relative;
     min-height: 568px;
 }
-
+.hello-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.hello-bg__layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    will-change: transform;
+}
+.hello-bg__video {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: -5;
+}
+.hello-bg__img {
+    max-width: 120%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
 .auth-btn {
     width: 180px;
     height: 46px;
@@ -24,10 +53,12 @@
         padding: 12px 20px;
     }
 }
-
-.hello {
+.flipper-wrap {
     @include centered();
     top: 49%;
+}
+.hello,
+.auth {
     background-color: rgba(#1c1f29, 0.5);
     text-align: center;
     padding-top: 33px;
@@ -60,7 +91,6 @@
         border-right: 1px solid #fff;
         border-left: 1px solid #fff;
     }
-
 }
 .btns__link {
     padding: 12px 31px;
@@ -76,6 +106,156 @@
         font-size: 14px;
         padding: 12px 21px;
     }
+}
+// авторизация
+.auth__title {
+    @include webissimo();
+    font-size: 35px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 35px;
+    margin-bottom: 40px;
+}
+.auth__form {
+    margin-bottom: 40px;
+}
+.auth__icon-wrap,
+.auth__input {
+    display: inline-block;
+    vertical-align: middle;
+}
+.auth__input-label {
+    font-size: 0;
+    display: block;
+    margin-bottom: 20px;
+}
+.auth__icon-wrap {
+    width: 45px;
+    height: 45px;
+    background-color: #f0efe9;
+    position: relative;
+}
+.auth__icon {
+    width: 15px;
+    height: 15px;
+    fill: #c4cbcd;
+    @include centered();
+}
+.auth__input {
+    height: 45px;
+    width: 295px;
+    border: none;
+    outline-color: $blue;
+    padding: 15px 20px;
+    color: rgba(#373e42, .5);
+    @include roboto(regular);
+    font-size: 16px;
+}
+.auth__checkbox {
+    position: absolute;
+    left: -9999px;
+}
+.auth__checkbox:checked + .auth__checkbox-block {
+    background-color: $blue;
+}
+.auth__checkbox-label {
+    cursor: pointer;
+    margin-bottom: 20px;
+    display: block;
+}
+.auth__checkbox-block,
+.auth__checkbox-text {
+    display: inline-block;
+    vertical-align: middle;
+}
+.auth__checkbox-block {
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border-radius: 2px;
+    margin-right: 10px;
+    position: relative;
+    transition: .3s;
+    &::after {
+        content: '';
+        display: block;
+        background-image: url('./../img/icons/check.svg');
+        width: 12px;
+        height: 12px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        @include centered();
+    }
+}
+.auth__checkbox-text {
+    @include roboto(regular);
+    color: #fff;
+}
+.auth__radio-title {
+    color: #fff;
+    @include roboto(bold);
+    margin-bottom: 10px;
+}
+.auth__radio-label {
+    display: inline-block;
+    vertical-align: middle;
+    &:first-child {
+        margin-right: 20px;
+    }
+}
+.auth__radio {
+    position: absolute;
+    left: -9999px;
+}
+.auth__radio:checked + .auth__radio-block::after {
+    width: 10px;
+    height: 10px;
+}
+
+.auth__radio-block,
+.auth__radio-text {
+    display: inline-block;
+    vertical-align: middle;
+}
+.auth__radio-block {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-right: 5px;
+    position: relative;
+    &::after {
+        content: '';
+        display: block;
+        border-radius: 50%;
+        transition: .3s;
+        width: 0;
+        height: 0;
+        background-color: $blue;
+        @include centered();
+    }
+}
+.auth__radio-text {
+    color: #fff;
+    @include roboto(regular);
+}
+.auth__link,
+.auth__button {
+    display: inline-block;
+    width: 50%;
+    padding: 13px 0;
+    vertical-align: middle;
+    background-color: $blue;
+    color: #fff;
+    @include roboto(regular);
+    transition: .3s;
+    &:hover {
+        background-color: #083c96;
+    }
+}
+.auth__link {
+    border-right: 1px solid #eee;
 }
 
 .hello__footer {

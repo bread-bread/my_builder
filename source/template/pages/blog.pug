@@ -3,7 +3,10 @@ extends ../_template
 block variables
   - var title = 'Блог'
 block content
-    img.first-screen__bg(src="./assets/img/decor/blog_bg.jpg")
+    .first-screen__bg-normal
+        img.blog__bg-img(src="./assets/img/decor/blog_bg.jpg")
+    .first-screen__bg-wrap
+        img.first-screen__bg(src="./assets/img/decor/blog_bg.jpg")
     section.section.first-screen.blog
         .first-screen__container
             .first-screen__socials

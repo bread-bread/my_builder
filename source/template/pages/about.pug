@@ -6,7 +6,10 @@ block variables
   - var contacts = [['skype_n', '_'],['envelope_n', 'p.reshetnev@yandex.ru'],['phone_n', '+79117813559'],['map_n', 'Санкт-Петербург']]
 
 block content
-  img.first-screen__bg(src="./assets/img/decor/bg_about.jpg")
+  .first-screen__bg-normal
+        img.first-screen__bg-img(src="./assets/img/decor/bg_about.jpg")
+  .first-screen__bg-wrap
+        img.first-screen__bg(src="./assets/img/decor/bg.jpg")
   section.section.first-screen
       .first-screen__container
           .first-screen__socials

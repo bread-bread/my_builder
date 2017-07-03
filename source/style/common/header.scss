@@ -30,8 +30,33 @@
     float: right;
     margin: 28px 28px 0 0;
 }
-.nav-trigger__icon {
-    width: 42px;
-    height: 35px;
-    fill: #fff;
+.nav-trigger__line {
+    width: 50px;
+    height: 5px;
+    background-color: #ecf0f1;
+    display: block;
+    margin: 8px auto;
+    transition: all 0.3s ease-in-out;
+}
+.nav-trigger_active{
+  transition: all 0.3s ease-in-out;
+  transition-delay: 0.6s;
+  transform: rotate(45deg);
+}
+
+.nav-trigger_active .nav-trigger__line:nth-child(2){
+  width: 0px;
+}
+
+.nav-trigger_active .nav-trigger__line:nth-child(1),
+.nav-trigger_active .nav-trigger__line:nth-child(3){
+  transition-delay: 0.3s;
+}
+
+.nav-trigger_active .nav-trigger__line:nth-child(1){
+  transform: translateY(13px);
+}
+
+.nav-trigger_active .nav-trigger__line:nth-child(3){
+  transform: translateY(-13px) rotate(90deg);
 }
