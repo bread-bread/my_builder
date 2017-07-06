@@ -5,6 +5,7 @@
 .first-screen {
   height: 100vh;
   max-height: 980px;
+  min-height: 560px;
 }
 .map {
   height: 100vh;
@@ -21,6 +22,7 @@
 }
 .slider {
   height: 100vh;
+  min-height: 568px;
   display: flex;
   flex-flow: column wrap;
   @include tablet {

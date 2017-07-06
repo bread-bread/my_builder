@@ -25,18 +25,29 @@
 .socials_float_margin {
     float: left;
     margin: 31px 0 0 31px;
+    @include phone {
+        margin: 15px 0 0 10px;
+    }
 }
 .nav-trigger {
     float: right;
     margin: 28px 28px 0 0;
+    @include phone {
+        margin: 5px 10px 0 0;
+    }
 }
 .nav-trigger__line {
-    width: 50px;
+    width: 40px;
     height: 5px;
     background-color: #ecf0f1;
     display: block;
-    margin: 8px auto;
+    margin: 10px auto;
     transition: all 0.3s ease-in-out;
+    @include phone {
+        width: 30px;
+        height: 4px;
+        margin: 8px auto;
+    }
 }
 .nav-trigger_active{
   transition: all 0.3s ease-in-out;
@@ -58,5 +69,8 @@
 }
 
 .nav-trigger_active .nav-trigger__line:nth-child(3){
-  transform: translateY(-13px) rotate(90deg);
+  transform: translateY(-17px) rotate(90deg);
+  @include phone {
+      transform: translateY(-11px) rotate(90deg);
+  }
 }

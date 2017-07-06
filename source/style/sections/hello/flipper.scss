@@ -2,6 +2,12 @@
     perspective: 1000;
     height: 410px;
     width: 378px;
+    @include tablet {
+        width: 348px;
+    }
+    @include phone {
+        width: 295px;
+    }
 }
 .clicked .flipper{
     transform: rotateY(180deg);

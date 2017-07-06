@@ -2,12 +2,13 @@
     width: 50%;
     display: flex;
     height: 100%;
+    min-height: 220px;
     background-color: $beige;
     align-items: center;
     justify-content: center;
     @include tablet {
         width: 100%;
-        height: 35%;
+        height: 30%;
         order: -1;
     }
 }
@@ -20,6 +21,9 @@
 }
 .slider__title {
     margin-bottom: 25px;
+    @include phone {
+        margin-bottom: 20px;
+    }
 }
 .slider__tech {
     text-transform: uppercase;
@@ -27,6 +31,9 @@
     @include roboto(medium);
     @include tablet {
         margin-bottom: 30px;
+    }
+    @include phone {
+        margin-bottom: 20px;
     }
 }
 .slider__link {
@@ -36,6 +43,9 @@
     @include roboto(regular);
     box-sizing: border-box;
     display: inline-block;
+    @include phone {
+        padding: 10px 20px;
+    }
 }
 .slider__link-icon {
     display: inline-block;
@@ -55,19 +65,36 @@
 .slider__preview {
     width: 50%;
     height: 70%;
-    background-image: url('./../img/content/slider_preview.png');
-    background-position: center;
-    background-repeat: no-repeat;
+    min-height: 258px;
     background-color: #e3e2de;
     @include tablet {
         width: 100%;
-        height: 45%;
+        height: 50%;
         order: -2;
     }
+}
+.slider__preview-img-wrap {
+    height: 100%;
+    width: 100%;
+    padding: 20px 40px;
+    position: relative;
+}
+.slider__preview-img {
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
 }
 .slider__controls {
     height: 30%;
     display: flex;
+    background-color: #f2f0e8;
+    @include phone {
+        height: 20%;
+    }
 }
 .slider__controls-left,
 .slider__controls-right {

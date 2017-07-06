@@ -10,7 +10,7 @@
 .container {
     padding: 29px 30px 20px;
     display: flex;
-    @include tablet {
+    @include laptop {
         flex-wrap: wrap;
         padding: 29px 23px 20px;
     }
@@ -24,7 +24,23 @@
 }
 .footer-main__col {
     flex: 1 1 auto;
-    @include tablet {
+    &:first-child {
+        @include desctop {
+            flex: 1.5;
+        }
+        @include laptop {
+            flex: none;
+        }
+    }
+    &:last-child {
+        @include desctop {
+            flex: 1;
+        }
+        @include laptop {
+            flex: none;
+        }
+    }
+    @include laptop {
         flex: none;
         &:first-child {
             width: 100%;
@@ -63,7 +79,10 @@
         &::before {
             left: 0;
         }
-        @include tablet {
+        @include desctop {
+            flex: 2.5;
+        }
+        @include laptop {
             padding: 0;
             margin: 0;
             width: 70%;
@@ -84,26 +103,26 @@
     @include roboto(light);
     color: #fff;
     max-width: 350px;
-    @include tablet {
+    @include laptop {
         max-width: 100%;
     }
 }
 .footer-main__row_margin {
     margin-bottom: 40px;
-    @include tablet {
+    @include laptop {
         margin-bottom: 18px;
     }
 }
 .menu__item {
     display: inline-block;
-    margin-right: 35px;
+    margin-right: 32px;
     &:last-child {
         margin-right: 0;
     }
     @include laptop {
         margin-right: 30px;
     }
-    @include phone {
+    @include tablet {
         margin-right: 10px;
     }
 }

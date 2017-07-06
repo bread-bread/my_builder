@@ -3,6 +3,21 @@
     position: relative;
     min-height: 568px;
 }
+.hello-bg-normal {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include desctop {
+        display: block;
+    }
+}
+.hello-bg-normal__img {
+    display: block;
+    max-width: 2215px;
+}
 .hello-bg {
     position: absolute;
     left: 0;
@@ -10,6 +25,9 @@
     height: 100%;
     width: 100%;
     overflow: hidden;
+    @include desctop {
+        display: none;
+    }
 }
 .hello-bg__layer {
     position: absolute;
@@ -42,7 +60,7 @@
     position: absolute;
     top: 24px;
     right: 20px;
-    transition: background .3s;
+    transition: background, transform .3s ease-in-out;
     &:hover {
         background-color: #083c96;
         border: 1px solid transparent;
@@ -51,7 +69,12 @@
         width: 150px;
         @include centered(x);
         padding: 12px 20px;
+        top: 10px;
     }
+}
+.auth-btn__hidden {
+    opacity: 0;
+    transform: translateY(-400px);
 }
 .flipper-wrap {
     @include centered();
@@ -63,6 +86,9 @@
     text-align: center;
     padding-top: 33px;
     width: 378px;
+    @include tablet {
+        width: 348px;
+    }
     @include phone {
         width: 295px;
     }
@@ -102,6 +128,9 @@
     &:hover {
         background-color: #083c96;
     }
+    @include tablet {
+        padding: 11px 26px;
+    }
     @include phone {
         font-size: 14px;
         padding: 12px 21px;
@@ -115,6 +144,9 @@
     text-transform: uppercase;
     line-height: 35px;
     margin-bottom: 40px;
+    @include tablet {
+        font-size: 30px;
+    }
 }
 .auth__form {
     margin-bottom: 40px;
@@ -150,6 +182,12 @@
     color: rgba(#373e42, .5);
     @include roboto(regular);
     font-size: 16px;
+    @include tablet {
+        width: 260px;
+    }
+    @include phone {
+        width: 215px;
+    }
 }
 .auth__checkbox {
     position: absolute;
@@ -253,6 +291,9 @@
     &:hover {
         background-color: #083c96;
     }
+    @include tablet {
+        padding: 11px 0;
+    }
 }
 .auth__link {
     border-right: 1px solid #eee;
@@ -263,10 +304,17 @@
     bottom: 33px;
     left: 0;
     right: 0;
+    @include phone {
+        bottom: 5px;
+    }
 }
 .footer_transp {
     .footer-copyright {
         background-color: transparent;
+        @include phone {
+            width: 300px;
+            margin: 0 auto;
+        }
     }
     .footer-copyright__text {
         @include roboto(light);

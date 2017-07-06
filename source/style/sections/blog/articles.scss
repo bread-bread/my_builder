@@ -37,6 +37,29 @@
     @include tablet {
         display: none;
     }
+    @include phone {
+        display: block;
+        position: absolute;
+        width: 80%;
+        height: 120vh;
+        top: -20vh;
+        padding-top: 25vh;
+        left: -80%;
+        background-color: #253468;
+        z-index: 3;
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 20px;
+            height: 50px;
+            background-color: #253468;
+            right: -10px;
+            top: 85vh;
+            border-bottom-right-radius: 50%;
+            border-top-right-radius: 50%;
+        }
+    }
 }
 .side-nav {
     margin-top: 12px;
@@ -49,11 +72,19 @@
     color: $main_font_color;
     display: block;
     border-right: 4px solid transparent;
+    @include phone {
+        color: #fff;
+        @include roboto(light);
+    }
 }
 .side-nav__link_active {
     color: $blue;
     border-right: 4px solid $blue;
     @include roboto(bold);
+    @include phone {
+        color: #fff;
+        border-right: 4px solid #fff;
+    }
 }
 .articles__content {
     width: 74%;

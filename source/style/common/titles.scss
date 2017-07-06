@@ -69,4 +69,7 @@
 }
 .block-subtitle_lineHeight {
   line-height: 40px;
+  @include phone {
+    line-height: 28px;
+  }
 }

@@ -1,15 +1,22 @@
 ////////////////////////////////////////////////////
 (function(){
   let flipper = document.querySelector('.flipper-wrap'),
-      button = document.querySelector('.auth-btn');
-  if (button) {
-  button.addEventListener('click', function(e){
-    e.preventDefault();
-    flipper.classList.toggle('clicked');
-  })
-  }
+      button = document.querySelector('.auth-btn'),
+      authLink = document.querySelector('.auth__link');
+  if (button, authLink) {
+    button.addEventListener('click', function(e){
+      e.preventDefault();
+      flipper.classList.toggle('clicked');
+      button.classList.toggle('auth-btn__hidden');
+    })
+    authLink.addEventListener('click', function(e){
+      e.preventDefault();
+      flipper.classList.toggle('clicked');
+      button.classList.toggle('auth-btn__hidden');
+    })
+  };
 }());
-
+//////////////////////////////////////////////////////
 (function(){
   let triggerBtn = document.querySelector('.nav-trigger');
 
@@ -46,11 +53,19 @@ var parallax = (function(){
   }
 
 }());
-
-window.onscroll = function(){
-  var wScroll = window.pageYOffset;
-  parallax.init(wScroll);
-};
+if (window.innerWidth >= 1200) {
+  window.addEventListener('scroll', function(){
+    var wScroll = window.pageYOffset;
+    parallax.init(wScroll);
+  })
+}
+else {
+  window.removeEventListener('scroll', function(){
+    var wScroll = window.pageYOffset;
+    parallax.init(wScroll);
+  })
+}
+  
 ////////////////////////////////////////////////////
 
 var helloParallaxCont = document.querySelector('.hello-bg'),
@@ -60,7 +75,6 @@ var moveLayers = function(e) {
   var initialX = (window.innerWidth / 2) - e.pageX;
   var initialY = (window.innerHeight / 2) - e.pageY;
 
-  console.log(initialX, initialY);
 
   [].slice.call(layers).forEach(function(layer, i){
     var divider = i/100,
