@@ -7,6 +7,12 @@
         height: 560px;
     }
 }
+.blog-bg {
+    max-width: 100%;
+    @include desctopFHD {
+        max-width: 140%;
+    }
+}
 .blog__bg-img {
     width: 1650px;
 }

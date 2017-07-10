@@ -16,6 +16,7 @@ html(lang="ru")
 
     link(rel='stylesheet' href='/assets/css/foundation.css')
     link(rel='stylesheet' href='/assets/css/app.css')
+    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBKAPfgV27V26ERnW3o0odwAdN6O0amdoI')
     script(src='/assets/js/foundation.js' defer)
     script(src='/assets/js/app.js' defer)
     script(async='', src='https://production-assets.codepen.io/assets/embed/ei.js')
@@ -27,3 +28,20 @@ html(lang="ru")
   body
     .wrapper
       block content
+    .preloader
+      .preloader__spinner
+        .preloader__animation
+          svg.preloader__animation-icon(x="0px" y="0px" width="50px" height="50px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve")
+            circle(class="preloader__circle" fill="none" stroke="#fff" stroke-width="2" stroke-miterlimit="10" cx="25" cy="25" r="23")
+        .preloader__percents 0%
+    .modal#success
+      .modal__text Сообщение отправлено
+      a.modal__button(href="#") Закрыть
+    .modal#error
+      .modal__text Произошла ошибка
+      a.modal__button(href="#") Закрыть
+    .main-menu
+      ul.main-menu__list
+       each item in [['Мои работы', 'works.html'], ['Обо мне', 'about.html'], ['Блог', 'blog.html'], ['Авторизация', 'index.html']]
+        li.main-menu__item
+          a(href=`./${item[1]}` class="main-menu__link") #{item[0]}

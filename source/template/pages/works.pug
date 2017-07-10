@@ -82,11 +82,11 @@ block content
         .form-wrap
             .form__title
                 .block-subtitle связаться со мной
-            form.form
+            form.form#feedback
                 .form__wrap
-                    input(class="form__input" type="text" name="name" placeholder="Ваше имя")
+                    input(class="form__input" type="text" name="name" placeholder="Ваше имя" data-position="right" data-content="Вы не ввели ваше имя")
                 .form__wrap
-                    input(class="form__input" type="email" name="email" placeholder="Ваш email")
+                    input(class="form__input" type="email" name="email" placeholder="Ваш email" data-position="right" data-content="Вы не ввели email")
                 .form__wrap
                     textarea(class="form__input text-area" name="message" placeholder="Ваше сообщение")
                 .form__wrap-btn

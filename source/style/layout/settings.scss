@@ -30,17 +30,11 @@ a {
     text-decoration: none;
 }
 .google-map {
-    background-image: url('./../img/content/map.jpg');
-    height: 100%;
-    background-size: cover;
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    @include phone {
-        position: static;
-        height: 500px;
-    }
+    top: 0;
 }
 p {
     margin: 0;

@@ -1,0 +1,41 @@
+.modal {
+    width: 280px;
+    padding: 18px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(#fff, .95);
+    text-align: center;
+    display: none;
+    margin: 0;
+}
+.modal__text {
+    margin-bottom: 30px;
+    @include roboto(regular);
+    line-height: 24px;
+    text-align: center;
+}
+.modal__button {
+    display: inline-block;
+    background-color: $blue;
+    padding: 9px 25px;
+    @include roboto(regular);
+    transition: all .3s;
+    color: #fff;
+    text-align: center;
+    &:hover {
+        background-color: #083c96;
+    }
+}
+.qtip-default {
+    border: none;
+    background-color: #e44845;
+    color: #fff;
+    font-size: 16px;
+    padding: 5px 0;
+    @include roboto(regular);
+    .qtip-tip {
+        border-color: #e44845;
+    }
+}

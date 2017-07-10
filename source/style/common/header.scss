@@ -32,6 +32,8 @@
 .nav-trigger {
     float: right;
     margin: 28px 28px 0 0;
+    position: relative;
+    z-index: 11;
     @include phone {
         margin: 5px 10px 0 0;
     }
@@ -42,7 +44,7 @@
     background-color: #ecf0f1;
     display: block;
     margin: 10px auto;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
     @include phone {
         width: 30px;
         height: 4px;
@@ -50,8 +52,8 @@
     }
 }
 .nav-trigger_active{
-  transition: all 0.3s ease-in-out;
-  transition-delay: 0.6s;
+  transition: all 0.2s ease-in-out;
+  transition-delay: 0.4s;
   transform: rotate(45deg);
 }
 
@@ -61,7 +63,7 @@
 
 .nav-trigger_active .nav-trigger__line:nth-child(1),
 .nav-trigger_active .nav-trigger__line:nth-child(3){
-  transition-delay: 0.3s;
+  transition-delay: 0.2s;
 }
 
 .nav-trigger_active .nav-trigger__line:nth-child(1){

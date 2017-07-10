@@ -24,8 +24,13 @@
     }
 }
 .first-screen__bg {
-    max-width: 180%;
+    max-width: 100%;
     display: block;
+    position: absolute;
+    bottom: 165px;
+    @include desctopFHD {
+        max-width: 140%;
+    }
 }
 .first-screen__socials {
     top: 0;
