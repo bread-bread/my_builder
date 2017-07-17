@@ -1,0 +1,102 @@
+// header
+.header {
+    height: 80px;
+    background-color: $blue;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+.header__left,
+.header__right {
+    display: flex;
+    align-items: center;
+    @include roboto(medium);
+}
+.header__left {
+    padding-left: 30px;
+    color: #fff;
+    font-size: 28px;
+}
+.header__right {
+    padding-right: 30px;
+}
+.header__link {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: underline;
+    opacity: 0.7;
+}
+.tabs {
+    background: #f0efe9;
+}
+.tabs__list {
+    font-size: 0;
+}
+.tabs__item {
+    display: inline-block;
+    border-right: 2px solid #fff;
+}
+.tabs__link {
+    display: block;
+    width: 178px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgba($main_font_color, .7);
+    font-size: 16px;
+}
+.tabs-content {
+    padding: 50px 30px 40px;
+    background-color: rgba(#000, .2);
+}
+.tabs-title {
+    @include roboto(medium);
+    font-size: 21px;
+    color: $main_font_color;
+    margin-bottom: 45px;
+}
+.tabs-column__title {
+    @include roboto(medium);
+    color: $main_font_color;
+}
+.tabs-column__list {
+    width: 190px;
+}
+.tabs-column__item {
+    margin-bottom: 10px;
+    text-align: right;
+}
+.tabs-column__tech,
+.tabs-column__input,
+.tabs-column__perc {
+    display: inline-block;
+}
+.tabs-column__tech {
+    @include roboto(light);
+    text-align: left;
+    width: 120px;
+}
+.tabs-column__input {
+    width: 50px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: #fff;
+}
+.tabs__button {
+    background-color: $blue;
+    color: #fff;
+    border-radius: 5px;
+    padding: 12px 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.blog-form__input {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 15px 20px;
+}

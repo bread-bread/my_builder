@@ -34,22 +34,22 @@
     width: 26%;
     float: left;
     text-align: right;
+    // @include tablet {
+    //     display: none;
+    // }
     @include tablet {
-        display: none;
-    }
-    @include phone {
         display: block;
-        position: absolute;
-        width: 80%;
+        position: fixed;
+        width: 0;
         height: 120vh;
         top: -20vh;
         padding-top: 25vh;
-        left: -80%;
+        left: 0;
         background-color: #253468;
         z-index: 3;
-        &::after {
-            content: '';
+        &__trigger {
             display: block;
+            cursor: pointer;
             position: absolute;
             width: 20px;
             height: 50px;
@@ -63,6 +63,7 @@
 }
 .side-nav {
     margin-top: 12px;
+    overflow: hidden;
     &__item {
         margin-bottom: 10px;
     }
@@ -72,7 +73,7 @@
     color: $main_font_color;
     display: block;
     border-right: 4px solid transparent;
-    @include phone {
+    @include tablet {
         color: #fff;
         @include roboto(light);
     }
@@ -81,7 +82,7 @@
     color: $blue;
     border-right: 4px solid $blue;
     @include roboto(bold);
-    @include phone {
+    @include tablet {
         color: #fff;
         border-right: 4px solid #fff;
     }

@@ -10,3 +10,13 @@ mixin skills(title, skills)
                 circle(r="45" cx="50%" cy="50%" fill="none" class="circle__first")
                 circle(r="45" cx="50%" cy="50%"  transform="rotate(-90 55 55)" class="circle__second circle-55")
               .skill__title #{skill}
+
+mixin skillsAdmin(title, skillName)
+  li.tabs-column__title #{title}
+    ul.tabs-column__list
+      each skill in skillName
+        li.tabs-column__item
+          label.tabs-column__label
+            .tabs-column__tech #{skill}
+            input.tabs-column__input(type="number" name=`${skill}` min="0" max="100" step="5")
+            .tabs-column__perc %

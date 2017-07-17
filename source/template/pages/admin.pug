@@ -1,0 +1,50 @@
+extends ../_template-admin
+include ../common/_mixins.pug
+
+block variables
+  - var title = 'Панель администрирования'
+
+block content
+    header.header
+        .header__left
+            .header__text Панель администрирования
+        .header__right
+            a.header__link(href="/index.html") Вернуться на сайт
+    .tabs
+        ul.tabs__list
+            each item in ['Скиллы', 'Статьи', 'Работы']
+                li.tabs__item 
+                    a.tabs__link(href="#") #{item}
+    .tabs-content
+        .skills-tab
+            .tabs-title Страница "Обо мне"
+            form.about-form
+                ul.tabs-column
+                    +skillsAdmin('Frontend', ['html', 'css', 'javaScript'])
+                    +skillsAdmin('Backend', ['php', 'mySQL', 'Node.js & npm', 'mongo.db'])
+                    +skillsAdmin('Workflow', ['git', 'gulp', 'yarn'])
+                    input.tabs__button(type="submit" value="Сохранить")
+        .blog-tab
+            .tabs-title Страница "Блог"
+            form.blog-form
+                .blog-form__title Добавить запись
+                input.blog-form__input(type="text" name="name" placeholder="Название")
+                - 
+                      var data = new Date().toLocaleDateString('ru', { 
+                                  year: 'numeric', 
+                                  month: '2-digit', 
+                                  day: '2-digit'
+                                  })
+                input.blog-form__input(type="date" name="date" value=`${data}`)
+                textarea.blog-form__textarea(name="message" placeholder="Содержание")
+                input.tabs__button(type="submit" value="Добавить")
+        .works-tab
+            .tabs-title Страница "Мои Работы"
+            from.works-from(enctype="multipart/form-data")
+                .works-form__title Добавить работу
+                input.blog-form__input(type="text" name="name" placeholder="Название проекта")
+                input.blog-form__input(type="text" name="technology" placeholder="Технологии")
+                label.blog-form__label
+                    .blog-form__icon
+                    input.blog-form__inputImg(type="image" name="image" value="Загрузить картинку")
+                input.tabs__button(type="submit" value="Добавить")

@@ -122,6 +122,7 @@
     margin: 0 auto;
     margin-bottom: 18px;
     width: 340px;
+    position: relative;
     @include tablet {
         width: 308px;
     }
