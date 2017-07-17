@@ -21,6 +21,9 @@
     &:last-child {
         margin-bottom: 0;
     }
+    @include phone {
+        margin-bottom: 35px;
+    }
 }
 .main-menu__link {
     @include webissimo();
@@ -39,11 +42,19 @@
         left: 50%;
         transform: translateX(-50%);
         transition: .3s;
+        @include phone {
+            width: 50px;
+            height: 3px;
+        }
     }
     &:hover {
         &::after {
             background-color: #fff;
         }
+    }
+    @include phone {
+        font-size: 35px;
+        padding-bottom: 15px;
     }
 }
 

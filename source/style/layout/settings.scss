@@ -35,6 +35,11 @@ a {
     left: 0;
     right: 0;
     top: 0;
+    @include phone {
+        position: relative;
+        height: 500px;
+        width: 100%;
+    }
 }
 p {
     margin: 0;
