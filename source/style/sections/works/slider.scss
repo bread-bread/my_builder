@@ -1,24 +1,63 @@
-.slider__desc {
-    width: 50%;
-    display: flex;
+.slider__control-left,
+.slider__control-right {
+    position: absolute;
+    width: 80px;
     height: 100%;
-    min-height: 220px;
-    background-color: $beige;
-    align-items: center;
-    justify-content: center;
-    @include tablet {
-        width: 100%;
-        height: 30%;
-        order: -1;
+}
+.slider__control-right {
+    right: 0;
+}
+.slider__control-left {
+    left: 0;
+}
+.slider__title {
+    .block-subtitle {
+        padding: 0 0 26px;
+        display: inline-block;
     }
 }
-.slider__desc-wrap {
-    width: 380px;
-    text-align: center;
-    @include tablet {
-        width: 100%;
-    }
+.slider__controls-icon {
+    width: 28px;
+    height: 18px;
+    fill: #4479d5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
 }
+
+.slider__wrap {
+    overflow: hidden;
+    height: 100%;
+    background-color: #e3e2de;
+}
+.slider__list {
+    white-space: nowrap;
+    position: relative;
+    height: 100%;
+}
+.slider__item {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    white-space: normal;
+}
+.slider__left,
+.slider__right {
+    width: 50%;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+.slider__right {
+    padding-left: 110px;
+}
+.slider__right-wrap {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 .slider__title {
     margin-bottom: 25px;
     @include phone {
@@ -83,18 +122,9 @@
     max-width: 100%;
     max-height: 100%;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    bottom: 0;
+    right: 0;
     display: block;
-}
-.slider__controls {
-    height: 30%;
-    display: flex;
-    background-color: #f2f0e8;
-    @include phone {
-        height: 20%;
-    }
 }
 .slider__controls-down,
 .slider__controls-up {
@@ -105,55 +135,71 @@
 }
 // .slider__controls-down {
 // }
-
-.slider__controls-up {
-    & .slider__controls-icon-wrap {
-        background-color: rgba(#7e7f8a, .7);
-    }
-}
-.slider__controls-down {
-  .slider__controls-item {
-    top: -100%;
-  }
-}
 .slider__controls-icon-wrap {
     height: 100%;
-    background-color: rgba(#aaabb7, .7);
     z-index: 11;
     position: relative;
 }
-.slider__controls-icon {
-    width: 45px;
-    height: 30px;
-    fill: #fff;
-    @include centered();
-}
-.slider__controls-list {
+
+.slider-dots {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
 }
-.slider__controls-item {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    top: 100%;
-    &.active {
-        top: 0;
+.slider-dots__item {
+    display: inline-block;
+    margin-right: 20px;
+    &:last-child {
+        margin-right: 0;
     }
 }
-.slider__controls-img {
-    padding: 10px;
-    max-width: 100%;
-    max-height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
+.slider-dots__link {
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border: 3px solid $blue;
+    border-radius: 50%;
+    transition: .3s;
 }
+.active {
+    .slider-dots__link {
+        background-color: $blue;
+    }
+}
+// .slider__controls-icon {
+//     width: 45px;
+//     height: 30px;
+//     fill: #fff;
+//     @include centered();
+// }
+// .slider__controls-list {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     overflow: hidden;
+// }
+// .slider__controls-item {
+//     position: absolute;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     top: 100%;
+//     &.active {
+//         top: 0;
+//     }
+// }
+// .slider__controls-img {
+//     padding: 10px;
+//     max-width: 100%;
+//     max-height: 100%;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     margin: auto;
+// }

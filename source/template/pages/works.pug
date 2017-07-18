@@ -31,49 +31,68 @@ block content
                 img.works__title-substrate-icon(src="./assets/img/decor/stars2.svg")
             .block-title.block-title_white мои работы
     section.section.slider
-        //- .slider__control-right
-        //-     a.slider__controls-down(href="#")
-        //-         .slider__controls-icon-wrap
-        //-             svg.slider__controls-icon
-        //-                 use(xlink:href="./assets/img/icons/sprite.svg#portf_arrow_down")
-        //- .slider__control-left
-        //-     a.slider__controls-down(href="#")
-        //-         .slider__controls-icon-wrap
-        //-             svg.slider__controls-icon
-        //-                 use(xlink:href="./assets/img/icons/sprite.svg#portf_arrow_down")
-        
-
-        ////////////////////////////////////////////////////////////////////////////////////////                
-        .slider__desc
-            .slider__desc-wrap
-                .slider__title
-                    .block-subtitle.block-subtitle_lineHeight сайт школы онлайн образования
-                .slider__tech html, css, javascript
-                a(class="slider__link" href="#")
-                    span.slider__link-icon-wrap
-                        svg.slider__link-icon
-                            use(xlink:href="./assets/img/icons/sprite.svg#link")
-                    span Посмотреть сайт
-        .slider__preview
-            .slider__preview-img-wrap
-                img.slider__preview-img(src="./assets/img/content/control_1.png")
-        .slider__controls
-            a.slider__controls-down(href="#")
-                .slider__controls-icon-wrap
-                    svg.slider__controls-icon
-                        use(xlink:href="./assets/img/icons/sprite.svg#portf_arrow_down")
-                ul.slider__controls-list.slider__controls-listDown
-                    - for(var i = 1; i <= 4; i++)
-                        li.slider__controls-item(class=`${(i == 1) ? 'active' : ''}`)
-                            img(class="slider__controls-img" src=`/assets/img/content/control_${i}.png`, alt='')
-            a.slider__controls-up(href="#")
+        .slider__control-right
+            a.slider__control.slider__controls-up(href="#")
                 .slider__controls-icon-wrap
                     svg.slider__controls-icon
                         use(xlink:href="./assets/img/icons/sprite.svg#portf_arrow_up")
-                ul.slider__controls-list.slider__controls-listUp
-                    - for(var i = 4; i >= 1; i--)
-                        li.slider__controls-item(class=`${(i == 4) ? 'active' : ''}`)
-                            img(class="slider__controls-img" src=`/assets/img/content/control_${i}.png`, alt='')
+        .slider__control-left
+            a.slider__control.slider__controls-down(href="#")
+                .slider__controls-icon-wrap
+                    svg.slider__controls-icon
+                        use(xlink:href="./assets/img/icons/sprite.svg#portf_arrow_down")
+        .slider__wrap
+            ul.slider__list
+                each item in [[1, 'сайт 1', 'html, css, javascript'], [2, 'сайт 2', 'html, css, jquery'], [3, 'сайт 3', 'pug, sass, javascript']]
+                    li.slider__item(class=`${(item[0] == 1) ? 'active' : ''}`)
+                        .slider__left
+                            img.slider__preview-img(src=`./assets/img/content/control_${item[0]}.png`)
+                        .slider__right
+                            .slider__right-wrap
+                                .slider__title
+                                    .block-subtitle.block-subtitle_lineHeight #{item[1]}
+                                .slider__tech #{item[2]}
+                                a(class="slider__link" href="#")
+                                    span.slider__link-icon-wrap
+                                        svg.slider__link-icon
+                                            use(xlink:href="./assets/img/icons/sprite.svg#link")
+                                    span Посмотреть сайт
+        .slider-dots
+            ul.slider-dots__list
+                each item in [0, 1, 2]
+                    li.slider-dots__item(class=`${(item == 0) ? 'active' : ''}`)
+                        a.slider-dots__link(href=`${item}`)
+        ////////////////////////////////////////////////////////////////////////////////////////                
+        //- .slider__desc
+        //-     .slider__desc-wrap
+        //-         .slider__title
+        //-             .block-subtitle.block-subtitle_lineHeight сайт школы онлайн образования
+        //-         .slider__tech html, css, javascript
+        //-         a(class="slider__link" href="#")
+        //-             span.slider__link-icon-wrap
+        //-                 svg.slider__link-icon
+        //-                     use(xlink:href="./assets/img/icons/sprite.svg#link")
+        //-             span Посмотреть сайт
+        //- .slider__preview
+        //-     .slider__preview-img-wrap
+        //-         img.slider__preview-img(src="./assets/img/content/control_1.png")
+        //- .slider__controls
+        //-     a.slider__controls-down(href="#")
+        //-         .slider__controls-icon-wrap
+        //-             svg.slider__controls-icon
+        //-                 use(xlink:href="./assets/img/icons/sprite.svg#portf_arrow_down")
+        //-         ul.slider__controls-list.slider__controls-listDown
+        //-             - for(var i = 1; i <= 4; i++)
+        //-                 li.slider__controls-item(class=`${(i == 1) ? 'active' : ''}`)
+        //-                     img(class="slider__controls-img" src=`/assets/img/content/control_${i}.png`, alt='')
+        //-     a.slider__controls-up(href="#")
+        //-         .slider__controls-icon-wrap
+        //-             svg.slider__controls-icon
+        //-                 use(xlink:href="./assets/img/icons/sprite.svg#portf_arrow_up")
+        //-         ul.slider__controls-list.slider__controls-listUp
+        //-             - for(var i = 4; i >= 1; i--)
+        //-                 li.slider__controls-item(class=`${(i == 4) ? 'active' : ''}`)
+        //-                     img(class="slider__controls-img" src=`/assets/img/content/control_${i}.png`, alt='')
     section.section.callback
         .callback__title
             .callback__title__substrate
