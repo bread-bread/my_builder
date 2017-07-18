@@ -110,30 +110,36 @@ export default () => {
         var items = container.closest('.slider__wrap').find('.slider__item');
             container.find('.slider-dots__item').eq(items.filter('.active').index()).addClass('active').siblings().removeClass('active');
     };
+    var flag = true;
     var moveSlide = function(item, direction, container) {
         var items = container.find('.slider__item'),
             activeItem = items.filter('.active'),
             itemWidth = item.width(),
             duration = 500,
-            reqPosition, reqStrafe;
-       
-        if (direction === 'forward') {
-            reqPosition = itemWidth;
-            reqStrafe = -itemWidth;
-        } else if(direction === 'back') {
-            reqPosition = -itemWidth;
-            reqStrafe = itemWidth;
-        }
-        item.css('left', reqPosition).addClass('inprocess');
-        var movableItem = items.filter('.inprocess');
-        activeItem.animate({'left': reqStrafe}, duration);
-        movableItem.animate({'left': 0}, duration, function(){
-            var $this = $(this);
-            items.css('left', '0').removeClass('active');
-            $this.toggleClass('inprocess active');
+            reqPosition, 
+            reqStrafe;
+        if (flag) {
+            flag = false;
+            if (direction === 'forward') {
+                reqPosition = itemWidth;
+                reqStrafe = -itemWidth;
+            } else if (direction === 'back') {
+                reqPosition = -itemWidth;
+                reqStrafe = itemWidth;
+            }
+            item.css('left', reqPosition).addClass('inprocess');
+            var movableItem = items.filter('.inprocess');
+            activeItem.animate({ 'left': reqStrafe }, duration);
+            movableItem.animate({ 'left': 0 }, duration, function () {
+                var $this = $(this);
+                items.css('left', '0').removeClass('active');
+                $this.toggleClass('inprocess active');
 
-            activeDot(container.find('.slider-dots'));
-        });
+                activeDot(container.find('.slider-dots'));
+
+                flag = true;
+            });
+        }
     };
     $('.slider__control').on('click', function(e){
         e.preventDefault();
@@ -186,6 +192,7 @@ export default () => {
         currentDotNdx = dot.index(),
         direction = (activeDot.index() < currentDotNdx) ? 'forward' : 'back',
         reqItem = $this.closest('.slider__wrap').find('.slider__item').eq(currentDotNdx);
-      moveSlide(reqItem, direction, $('.slider__wrap'));
+
+            moveSlide(reqItem, direction, $('.slider__wrap'));
     });
 }
