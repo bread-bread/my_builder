@@ -3,6 +3,9 @@
     position: absolute;
     width: 80px;
     height: 100%;
+    @include phone {
+        width: 22px;
+    }
 }
 .slider__control-right {
     right: 0;
@@ -41,6 +44,10 @@
     height: 100%;
     display: inline-block;
     white-space: normal;
+    @include laptop {
+        display: inline-flex;
+        flex-wrap: wrap;
+    }
 }
 .slider__left,
 .slider__right {
@@ -48,14 +55,40 @@
     height: 100%;
     float: left;
     position: relative;
+    @include laptop {
+        width: 100%;
+        float: none;
+    }
+}
+.slider__left {
+    @include laptop {
+        height: 65%;
+        width: 100%;
+        order: 1;
+    }
+    @include phone {
+        height: 70%;
+    }
 }
 .slider__right {
     padding-left: 110px;
+    @include laptop {
+        height: 35%;
+        text-align: center;
+        padding: 0;
+    }
+    @include phone {
+        height: 30%;
+        padding: 15px 0;
+    }
 }
 .slider__right-wrap {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    @include laptop {
+        width: 100%;
+    }
 }
 
 .slider__title {
@@ -68,7 +101,7 @@
     text-transform: uppercase;
     margin-bottom: 55px;
     @include roboto(medium);
-    @include tablet {
+    @include laptop {
         margin-bottom: 30px;
     }
     @include phone {
@@ -125,6 +158,13 @@
     bottom: 0;
     right: 0;
     display: block;
+    @include laptop {
+        right: 50%;
+        transform: translateX(50%);
+    }
+    @include phone {
+        padding: 0 23px;
+    }
 }
 .slider__controls-down,
 .slider__controls-up {
@@ -146,12 +186,18 @@
     bottom: 50px;
     left: 50%;
     transform: translateX(-50%);
+    @include phone {
+        bottom: 10px;
+    }
 }
 .slider-dots__item {
     display: inline-block;
     margin-right: 20px;
     &:last-child {
         margin-right: 0;
+    }
+    @include phone {
+        margin-right: 10px;
     }
 }
 .slider-dots__link {
@@ -162,6 +208,11 @@
     border: 3px solid $blue;
     border-radius: 50%;
     transition: .3s;
+    @include phone {
+        width: 10px;
+        height: 10px;
+        border-width: 2px;
+    }
 }
 .active {
     .slider-dots__link {
