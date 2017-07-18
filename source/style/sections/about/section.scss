@@ -21,8 +21,11 @@
   align-items: stretch;
 }
 .slider {
-  height: 100vh;
-  min-height: 580px;
+  height: 720px;
+  @include laptop {
+    height: 100vh;
+    min-height: 580px;
+  }
   display: flex;
   flex-flow: column wrap;
   @include tablet {

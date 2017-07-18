@@ -57,11 +57,10 @@ block content
                                         svg.slider__link-icon
                                             use(xlink:href="./assets/img/icons/sprite.svg#link")
                                     span Посмотреть сайт
-        .slider-dots
-            ul.slider-dots__list
-                each item in [0, 1, 2]
-                    li.slider-dots__item(class=`${(item == 0) ? 'active' : ''}`)
-                        a.slider-dots__link(href=`${item}`)
+            ul.slider-dots
+                //- each item in [0, 1, 2]
+                //-     li.slider-dots__item(class=`${(item == 0) ? 'active' : ''}`)
+                //-         a.slider-dots__link(href=`${item}`)
         ////////////////////////////////////////////////////////////////////////////////////////                
         //- .slider__desc
         //-     .slider__desc-wrap
