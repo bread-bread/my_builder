@@ -27,10 +27,10 @@ export default () => {
         });
     });
     $(window).on('scroll', function(){
-        if (window.location.pathname === '/blog.html' && window.innerWidth > 768) {
+        if (window.innerWidth > 768 && $('#article_1').length) {
             var topScroll = $('#article_1').offset().top;
             ($(window).scrollTop() > topScroll) ? $('.sidebar').addClass('sidebar_fixed') : $('.sidebar').removeClass('sidebar_fixed');
-            
+        }
             var menu_selector = ".side-nav"; 
             var scroll_top = $(document).scrollTop();
             $(menu_selector + " .side-nav__item").each(function () {
@@ -43,7 +43,6 @@ export default () => {
                     $(this).removeClass("side-nav__item_active");
                 }
             });
-        }
     });
     ////////////////////////////////////////////////////////
     
