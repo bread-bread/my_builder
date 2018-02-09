@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Панель администрирования</title>
+    <meta content="" name="author">
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="shortcut icon" href="./assets/img/content/fav-night.png" type="image/png">
+    <link rel="stylesheet" href="/assets/css/foundation.css">
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKAPfgV27V26ERnW3o0odwAdN6O0amdoI"></script>
+    <script src="/assets/js/foundation.js" defer></script>
+    <script src="/assets/js/admin.js" defer></script>
+    <script async="" src="https://production-assets.codepen.io/assets/embed/ei.js"></script><!--[if lt IE 9]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__left">
+          <div class="header__text">Панель администрирования</div>
+        </div>
+        <div class="header__right"><a class="header__link" href="/index.html">Вернуться на сайт</a></div>
+      </header>
+      <div class="tabs">
+        <ul class="tabs__list">
+          <li class="tabs__item"> <a class="tabs__link" href="#">Скиллы</a></li>
+          <li class="tabs__item"> <a class="tabs__link" href="#">Статьи</a></li>
+          <li class="tabs__item"> <a class="tabs__link" href="#">Работы</a></li>
+        </ul>
+      </div>
+      <div class="tabs-content">
+        <div class="skills-tab">
+          <div class="tabs-title">Страница "Обо мне"</div>
+          <form class="about-form">
+            <ul class="tabs-column">
+              <li class="tabs-column__title">Frontend
+                <ul class="tabs-column__list">
+                  <li class="tabs-column__item">
+                    <label class="tabs-column__label">
+                      <div class="tabs-column__tech">html</div>
+                      <input class="tabs-column__input" type="number" name="html" min="0" max="100" step="5"/>
+                      <div class="tabs-column__perc">%</div>
+                    </label>
+                  </li>
+                  <li class="tabs-column__item">
+                    <label class="tabs-column__label">
+                      <div class="tabs-column__tech">css</div>
+                      <input class="tabs-column__input" type="number" name="css" min="0" max="100" step="5"/>
+                      <div class="tabs-column__perc">%</div>
+                    </label>
+                  </li>
+                  <li class="tabs-column__item">
+                    <label class="tabs-column__label">
+                      <div class="tabs-column__tech">javaScript</div>
+                      <input class="tabs-column__input" type="number" name="javaScript" min="0" max="100" step="5"/>
+                      <div class="tabs-column__perc">%</div>
+                    </label>
+                  </li>
+                </ul>
+              </li>
+              <li class="tabs-column__title">Backend
+                <ul class="tabs-column__list">
+                  <li class="tabs-column__item">
+                    <label class="tabs-column__label">
+                      <div class="tabs-column__tech">php</div>
+                      <input class="tabs-column__input" type="number" name="php" min="0" max="100" step="5"/>
+                      <div class="tabs-column__perc">%</div>
+                    </label>
+                  </li>
+                  <li class="tabs-column__item">
+                    <label class="tabs-column__label">
+                      <div class="tabs-column__tech">mySQL</div>
+                      <input class="tabs-column__input" type="number" name="mySQL" min="0" max="100" step="5"/>
+                      <div class="tabs-column__perc">%</div>
+                    </label>
+                  </li>
+                  <li class="tabs-column__item">
+                    <label class="tabs-column__label">
+                      <div class="tabs-column__tech">Node.js &amp; npm</div>
+                      <input class="tabs-column__input" type="number" name="Node.js &amp; npm" min="0" max="100" step="5"/>
+                      <div class="tabs-column__perc">%</div>
+                    </label>
+                  </li>
+                  <li class="tabs-column__item">
+                    <label class="tabs-column__label">
+                      <div class="tabs-column__tech">mongo.db</div>
+                      <input class="tabs-column__input" type="number" name="mongo.db" min="0" max="100" step="5"/>
+                      <div class="tabs-column__perc">%</div>
+                    </label>
+                  </li>
+                </ul>
+              </li>
+              <li class="tabs-column__title">Workflow
+                <ul class="tabs-column__list">
+                  <li class="tabs-column__item">
+                    <label class="tabs-column__label">
+                      <div class="tabs-column__tech">git</div>
+                      <input class="tabs-column__input" type="number" name="git" min="0" max="100" step="5"/>
+                      <div class="tabs-column__perc">%</div>
+                    </label>
+                  </li>
+                  <li class="tabs-column__item">
+                    <label class="tabs-column__label">
+                      <div class="tabs-column__tech">gulp</div>
+                      <input class="tabs-column__input" type="number" name="gulp" min="0" max="100" step="5"/>
+                      <div class="tabs-column__perc">%</div>
+                    </label>
+                  </li>
+                  <li class="tabs-column__item">
+                    <label class="tabs-column__label">
+                      <div class="tabs-column__tech">yarn</div>
+                      <input class="tabs-column__input" type="number" name="yarn" min="0" max="100" step="5"/>
+                      <div class="tabs-column__perc">%</div>
+                    </label>
+                  </li>
+                </ul>
+              </li>
+              <input class="tabs__button" type="submit" value="Сохранить">
+            </ul>
+          </form>
+        </div>
+        <div class="blog-tab">
+          <div class="tabs-title">Страница "Блог"</div>
+          <form class="blog-form">
+            <div class="blog-form__title">Добавить запись</div>
+            <input class="blog-form__input" type="text" name="name" placeholder="Название">
+            <input class="blog-form__input" type="date" name="date" value="2018-02-09">
+            <textarea class="blog-form__textarea" name="message" placeholder="Содержание"></textarea>
+            <input class="tabs__button" type="submit" value="Добавить">
+          </form>
+        </div>
+        <div class="works-tab">
+          <div class="tabs-title">Страница "Мои Работы"</div>
+          <from class="works-from" enctype="multipart/form-data">
+            <div class="works-form__title">Добавить работу</div>
+            <input class="blog-form__input" type="text" name="name" placeholder="Название проекта">
+            <input class="blog-form__input" type="text" name="technology" placeholder="Технологии">
+            <label class="blog-form__label">
+              <div class="blog-form__icon"></div>
+              <input class="blog-form__inputImg" type="image" name="image" value="Загрузить картинку">
+            </label>
+            <input class="tabs__button" type="submit" value="Добавить">
+          </from>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

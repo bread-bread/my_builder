@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Welcome</title>
+    <meta content="" name="author">
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="shortcut icon" href="./assets/img/content/fav-night.png" type="image/png">
+    <link rel="stylesheet" href="/assets/css/foundation.css">
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKAPfgV27V26ERnW3o0odwAdN6O0amdoI"></script>
+    <script src="/assets/js/foundation.js" defer></script>
+    <script src="/assets/js/app.js" defer></script>
+    <script async="" src="https://production-assets.codepen.io/assets/embed/ei.js"></script><!--[if lt IE 9]>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="hello-bg-normal"><img class="hello-bg-normal__img" src="./assets/img/decor/bg_about.jpg"></div>
+      <div class="hello-bg">
+        <div class="hello-bg__layer">
+          <video class="hello-bg__video" loop muted autoplay>
+            <source src="./assets/img/decor/night.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="hello-bg__layer"><img class="hello-bg__img" src="./assets/img/decor/night_no_bg.png"></div>
+      </div>
+      <div class="hello-wrap"><a class="auth-btn" href="#">Авторизоваться</a>
+        <div class="flipper-wrap">
+          <div class="flipper">
+            <div class="hello">
+              <div class="user__pic user__pic_marginReset"><img class="user__pic-img" src="./assets/img/content/avatar.jpg" alt="Avatar"></div>
+              <div class="user__description">
+                <div class="user__name user__name_fontSize">Решетнев Паша</div>
+                <div class="user__info">Личный сайт веб разработчика</div>
+              </div>
+              <ul class="socials socials_fill_blue">
+                <li class="socials__item"><a class="socials__link" href="">
+                    <svg class="socials__icon">
+                      <use xlink:href="./assets/img/icons/sprite.svg#vk"></use>
+                    </svg></a></li>
+                <li class="socials__item"><a class="socials__link" href="">
+                    <svg class="socials__icon">
+                      <use xlink:href="./assets/img/icons/sprite.svg#github"></use>
+                    </svg></a></li>
+                <li class="socials__item"><a class="socials__link" href="">
+                    <svg class="socials__icon">
+                      <use xlink:href="./assets/img/icons/sprite.svg#in"></use>
+                    </svg></a></li>
+              </ul>
+              <div class="hello__btns">
+                <ul class="btns">
+                  <li class="btns__item"><a class="btns__link" href="./works.html">Мои работы</a></li>
+                  <li class="btns__item"><a class="btns__link" href="./about.html">Обо мне</a></li>
+                  <li class="btns__item"><a class="btns__link" href="./blog.html">Блог</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="auth">
+              <div class="auth__title">Авторизуйтесь</div>
+              <div class="auth__form-wrap">
+                <form class="auth__form">
+                  <label class="auth__input-label">
+                    <div class="auth__icon-wrap">
+                      <svg class="auth__icon">
+                        <use xlink:href="./assets/img/icons/sprite.svg#login"></use>
+                      </svg>
+                    </div>
+                    <input class="auth__input" type="text" name="login" placeholder="Логин">
+                  </label>
+                  <label class="auth__input-label">
+                    <div class="auth__icon-wrap">
+                      <svg class="auth__icon">
+                        <use xlink:href="./assets/img/icons/sprite.svg#password"></use>
+                      </svg>
+                    </div>
+                    <input class="auth__input" type="password" name="password" placeholder="Пароль">
+                  </label>
+                  <label class="auth__checkbox-label">
+                    <input class="auth__checkbox" type="checkbox" name="human">
+                    <div class="auth__checkbox-block"></div>
+                    <div class="auth__checkbox-text">Я человек</div>
+                  </label>
+                  <div class="auth__radio-title">Вы точно не робот?</div>
+                  <div class="auth__radio-wrap">
+                    <label class="auth__radio-label">
+                      <input class="auth__radio" type="radio" name="humanity">
+                      <div class="auth__radio-block"></div>
+                      <div class="auth__radio-text">Да</div>
+                    </label>
+                    <label class="auth__radio-label">
+                      <input class="auth__radio" type="radio" name="humanity">
+                      <div class="auth__radio-block"></div>
+                      <div class="auth__radio-text">Не уверен</div>
+                    </label>
+                  </div>
+                </form><a class="auth__link" href="#">На главную</a><a class="auth__button" href="#">Войти</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="hello__footer footer_transp">
+          <div class="footer-copyright">
+            <div class="footer-copyright__text text-content">
+              <p>&copy; Решетнев Павел | Создано с любовью в Loftschool | 2017</p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <div class="preloader">
+      <div class="preloader__spinner">
+        <div class="preloader__animation">
+          <svg class="preloader__animation-icon" x="0px" y="0px" width="50px" height="50px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
+            <circle class="preloader__circle" fill="none" stroke="#fff" stroke-width="2" stroke-miterlimit="10" cx="25" cy="25" r="23"></circle>
+          </svg>
+        </div>
+        <div class="preloader__percents">0%</div>
+      </div>
+    </div>
+    <div class="modal" id="success">
+      <div class="modal__text">Сообщение отправлено</div><a class="modal__button" href="#">Закрыть</a>
+    </div>
+    <div class="modal" id="error">
+      <div class="modal__text">Произошла ошибка</div><a class="modal__button" href="#">Закрыть</a>
+    </div>
+    <div class="main-menu">
+      <ul class="main-menu__list">
+        <li class="main-menu__item"><a class="main-menu__link" href="./works.html">Мои работы</a></li>
+        <li class="main-menu__item"><a class="main-menu__link" href="./about.html">Обо мне</a></li>
+        <li class="main-menu__item"><a class="main-menu__link" href="./blog.html">Блог</a></li>
+        <li class="main-menu__item"><a class="main-menu__link" href="./index.html">Авторизация</a></li>
+      </ul>
+    </div>
+  </body>
+</html>
