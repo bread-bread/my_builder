@@ -147,6 +147,7 @@
     background-color: $blue;
     padding: 12px 20px;
     color: #fff;
+    transition: .3s;
     @include roboto(regular);
     box-sizing: border-box;
     display: inline-block;
@@ -163,6 +164,9 @@
     width: 20px;
     height: 20px;
     fill: #fff;
+}
+.slider__link:hover {
+    background-color: #083c96;
 }
 .slider__preview {
     width: 50%;

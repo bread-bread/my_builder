@@ -24,9 +24,7 @@ export default () => {
                 data: fData,
                 success: function(data) {
                     var modal = data.status ? "#success" : '#error';
-                    $(modal).fadeIn(300, function(){
-                        console.log('Animation complete');
-                    })
+                    $(modal).fadeIn(300);
                 }
             })
         }
@@ -45,6 +43,8 @@ export default () => {
     })
     $('.modal__button').on('click', function(event){
         event.preventDefault();
-        $(this).fadeOut(300);
+        $(this).parent().fadeOut(300, function(){
+            f.trigger('reset');
+        })
     })
 }

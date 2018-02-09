@@ -7,6 +7,15 @@
 .footer_works {
     width: 100%;
 }
+.footer_about {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    @include phone {
+        position: static;
+    }
+}
 .container {
     padding: 29px 30px 20px;
     display: flex;
@@ -128,6 +137,12 @@
 }
 .menu__link {
     color: #fff;
+    transition: .3s;
+    // border-bottom: 1px solid transparent;
+}
+.menu__link:hover {
+    // border-bottom: 1px solid #fff;
+    color: #679dfa;
 }
 .socials_margin_color {
     .socials_icon {

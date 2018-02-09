@@ -9,6 +9,7 @@ import validation from './modules/validation';
 import form from './modules/form';
 import slider from './modules/slider';
 import sidebar from './modules/blog_menu';
+import circle from './modules/circleAnimate';
 //
 $(document).ready(() => {
   preloader();
@@ -18,7 +19,10 @@ $(document).ready(() => {
   form();
   slider();
   sidebar();
+  circle();
 });
+
+
 //- init Scroll Parallax
 if (window.innerWidth >= 1200) {
   window.addEventListener('scroll', function () {
@@ -34,4 +38,20 @@ if (window.innerWidth >= 1200) {
 //- init GoogleMaps
 if ($('#map').length) {
   google.maps.event.addDomListener(window, 'load', mapGoogle().init);
+}
+//- scroll to top
+let scrollUp = $('.callback__scroll');
+let scrollDown = $('.first-screen__scroll');
+let scrollTo = $('.wrapper').find('.section');
+if (scrollUp.length) {
+  scrollUp.on('click', function(e){
+    e.preventDefault();
+    $('html').animate({scrollTop: 0}, 1500);
+  });
+}
+if (scrollDown.length) {
+  scrollDown.on('click', function(e){
+    e.preventDefault();
+    $('html').animate({scrollTop: $(scrollTo[1]).offset().top}, 800);
+  })
 }

@@ -6,10 +6,10 @@ mixin skills(title, skills)
         each skill in skills
           li.skills-row__item
             .skill
-              svg.circles
+              svg.circles.circles_clear
                 circle(r="45" cx="50%" cy="50%" fill="none" class="circle__first")
-                circle(r="45" cx="50%" cy="50%"  transform="rotate(-90 55 55)" class="circle__second circle-55")
-              .skill__title #{skill}
+                circle(r="45" cx="50%" cy="50%"  transform="rotate(-90 55 55)" class=`circle__second circle-${skill[1]}`)
+              .skill__title #{skill[0]}
 
 mixin skillsAdmin(title, skillName)
   li.tabs-column__title #{title}

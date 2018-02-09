@@ -1,5 +1,5 @@
 .flipper-wrap {
-    perspective: 1000;
+    perspective: 1000px;
     height: 410px;
     width: 378px;
     @include tablet {
@@ -9,11 +9,15 @@
         width: 295px;
     }
 }
-.clicked .flipper{
-    transform: rotateY(180deg);
+.clicked {
+    .hello {
+        transform: rotateY(-180deg);
+    }
+    .auth {
+        transform: rotateY(0deg);
+    }
 }
 .flipper {
-    transition: .6s;
     transform-style: preserve-3d;
     position: relative;
 }
@@ -21,8 +25,10 @@
 .auth {
     backface-visibility: hidden;
     position: absolute;
+    transition: 0.6s;
     top: 0;
     left: 0;
+    will-change: transform;
 }
 .hello {
     z-index: 2;

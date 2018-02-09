@@ -43,16 +43,16 @@ block content
                         use(xlink:href="./assets/img/icons/sprite.svg#portf_arrow_down")
         .slider__wrap
             ul.slider__list
-                each item in [[1, 'сайт 1', 'html, css, javascript'], [2, 'сайт 2', 'html, css, jquery'], [3, 'сайт 3', 'pug, sass, javascript']]
+                each item in [[1, 'Портфолио', 'html, scss, jquery', 'http://cg64320.tmweb.ru/'], [2, 'Лендинг бургерной', 'html, scss, javascript', 'https://bread-bread.github.io/']]
                     li.slider__item(class=`${(item[0] == 1) ? 'active' : ''}`)
                         .slider__left
-                            img.slider__preview-img(src=`./assets/img/content/control_${item[0]}.png`)
+                            img.slider__preview-img(src=`./assets/img/content/slider_${item[0]}.png`)
                         .slider__right
                             .slider__right-wrap
                                 .slider__title
                                     .block-subtitle.block-subtitle_lineHeight #{item[1]}
                                 .slider__tech #{item[2]}
-                                a(class="slider__link" href="#")
+                                a(class="slider__link" href=`${item[3]}` target="_blank")
                                     span.slider__link-icon-wrap
                                         svg.slider__link-icon
                                             use(xlink:href="./assets/img/icons/sprite.svg#link")
@@ -123,9 +123,9 @@ block content
                 .block-subtitle связаться со мной
             form.form#feedback
                 .form__wrap
-                    input(class="form__input" type="text" name="name" placeholder="Ваше имя" data-position="right" data-content="Вы не ввели ваше имя")
+                    input(class="form__input" type="text" name="name" placeholder="Ваше имя" data-position="top" data-content="Вы не ввели ваше имя")
                 .form__wrap
-                    input(class="form__input" type="email" name="email" placeholder="Ваш email" data-position="right" data-content="Вы не ввели email")
+                    input(class="form__input" type="email" name="email" placeholder="Ваш email" data-position="bottom" data-content="Вы не ввели email")
                 .form__wrap
                     textarea(class="form__input text-area" name="message" placeholder="Ваше сообщение")
                 .form__wrap-btn

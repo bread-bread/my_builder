@@ -1,3 +1,8 @@
+.skill {
+  display: inline-block;
+  position: relative;
+  cursor: default;
+}
 .circles {
   fill: none;
   stroke-width: 20;
@@ -12,12 +17,85 @@
   stroke-dasharray: .0010 282.6;
   transition: all 1s;
 }
-.circle-55 {
-   stroke-dasharray: 155.43 282.6;
+
+.circle-0 {
+  stroke-dasharray: .001 282.6;
 }
-.skill {
-  display: inline-block;
-  position: relative;
+.circle-10 {
+  stroke-dasharray: 28.26 282.6;
+  stroke-opacity: calc(28/283);
+}
+.circle-15 {
+  stroke-dasharray: 42.39 282.6;
+  stroke-opacity: calc(42/283);
+}
+.circle-20 {
+  stroke-dasharray: 56.52 282.6;
+  stroke-opacity: calc(57/283);
+}
+.circle-25 {
+  stroke-dasharray: 70.65 282.6;
+  stroke-opacity: calc(71/283);
+}
+.circle-30 {
+  stroke-dasharray: 84.78 282.6;
+  stroke-opacity: calc(85/283);
+}
+.circle-35 {
+  stroke-dasharray: 98.91 282.6;
+  stroke-opacity: calc(99/283);
+}
+.circle-40 {
+  stroke-dasharray: 113.04 282.6;
+  stroke-opacity: calc(113/283);
+}
+.circle-45 {
+  stroke-dasharray: 127.17 282.6;
+  stroke-opacity: calc(127/283);
+}
+.circle-50 {
+  stroke-dasharray: 141.3 282.6;
+  stroke-opacity: calc(141/283);
+}
+.circle-55 {
+  stroke-dasharray: 155.43 282.6;
+  stroke-opacity: calc(155/283);
+}
+.circle-60 {
+  stroke-dasharray: 169.56 282.6;
+  stroke-opacity: calc(170/283);
+}
+.circle-65 {
+  stroke-dasharray: 183.69 282.6;
+  stroke-opacity: calc(184/283);
+}
+.circle-70 {
+  stroke-dasharray: 197.82 282.6;
+  stroke-opacity: calc(198/283);
+}
+.circle-75 {
+  stroke-dasharray: 211.95 282.6;
+  stroke-opacity: calc(212/283);
+}
+.circle-80 {
+  stroke-dasharray: 226.08 282.6;
+  stroke-opacity: calc(226/283);
+}
+.circle-85 {
+  stroke-dasharray: 240.21 282.6;
+  stroke-opacity: calc(240/283);
+}
+.circle-90 {
+  stroke-dasharray: 254.34 282.6;
+  stroke-opacity: calc(254/283);
+}
+.circle-95 {
+  stroke-dasharray: 268.47 282.6;
+  stroke-opacity: calc(269/283);
+}
+.circle-100 {
+  stroke-dasharray: 282.6 282.6;
+  stroke-opacity: calc(283/283);
 }
 .skill__title {
     @include centered();
@@ -26,4 +104,17 @@
     text-align: center;
     width: 62px;
     overflow: hidden;
+    color: #243994;
+}
+.skill:hover {
+  .circle__second {
+    stroke: #083c96;
+    stroke-opacity: 1;
+  }
+}
+
+.circles_clear {
+  .circle__second {
+    stroke-dasharray: .001 282.6;
+  }
 }

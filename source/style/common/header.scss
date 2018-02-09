@@ -34,6 +34,10 @@
     margin: 28px 28px 0 0;
     position: relative;
     z-index: 11;
+    &:focus {
+        outline: none;
+        border: none;
+    }
     @include phone {
         margin: 5px 10px 0 0;
     }

@@ -11,8 +11,8 @@ var createQtip = function (element, direction) {
             at: 'center right'
         },
         bottom: {
-            my: 'bottom center',
-            at: 'top center'
+            my: 'top center',
+            at: 'bottom center'
         },
         top: {
             my: 'bottom center',

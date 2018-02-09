@@ -32,7 +32,9 @@
 }
 .sidebar {
     width: 26%;
+    height: 100%;
     float: left;
+    position: relative;
     text-align: right;
     transition: .5s ease-in-out;
     // @include tablet {
@@ -71,6 +73,12 @@
         margin-bottom: 10px;
     }
 }
+.sidebar_fixed {
+    position: fixed;
+    top: 15px;
+    left: 5px;
+}
+
 .side-nav__link {
     padding: 10px 20px;
     color: $main_font_color;
@@ -81,19 +89,22 @@
         @include roboto(light);
     }
 }
-.side-nav__link_active {
-    color: $blue;
-    border-right: 4px solid $blue;
-    @include roboto(bold);
-    @include tablet {
-        color: #fff;
-        border-right: 4px solid #fff;
+.side-nav__item_active {
+    .side-nav__link {
+        color: $blue;
+        border-right: 4px solid $blue;
+        @include roboto(bold);
+        @include tablet {
+            color: #fff;
+            border-right: 4px solid #fff;
+        }
     }
 }
+
 .articles__content {
     width: 74%;
-    max-width: 1000px;
-    float: left;
+    // max-width: 1400px;
+    float: right;
     padding-left: 93px;
     box-sizing: border-box;
     @include laptop {

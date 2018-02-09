@@ -141,7 +141,7 @@
     color: #fff;
     &:focus {
         border: none;
-        outline: none;
+        outline: 1px solid $blue;;
     }
 }
 .error {

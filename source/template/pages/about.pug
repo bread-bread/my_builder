@@ -55,23 +55,22 @@ block content
           p Больше всего меня привлекает Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
         .about__skills-content
           ul.skills-circle
-            +skills('Frontend', ['HTML5', 'CSS3', 'JavaScript & jQuery'])
-            +skills('Backend', ['PHP', 'mySQL', 'Node.js & npm', 'Mongo.db'])
-            +skills('WorkFlow', ['Git', 'Gulp', 'Yarn'])
+            +skills('Frontend', [['HTML5', 75], ['CSS3', 70], ['JavaScript & jQuery', 45]])
+            +skills('Backend', [['PHP', 15], ['mySQL', 15], ['Node.js & npm', 20], ['Mongo.db', 15]])
+            +skills('WorkFlow', [['Git', 55], ['Gulp', 35], ['Yarn', 45]])
   section.section.map
     .google-map#map
-    .contacts-wrap
-      .contacts
-        .contacts__title
-          .block-subtitle контакты
-        ul.contacts__list
-          each contact in contacts
-            li.contacts__item
-              .contacts-row
-                .contacts-row__icon-wrap
-                  svg.contacts-row__icon
-                    use(xlink:href=`./assets/img/icons/sprite.svg#${contact[0]}`)
-                .contacts-row__content #{contact[1]}
-    footer.footer
+    .contacts
+      .contacts__title
+        .block-subtitle контакты
+      ul.contacts__list
+        each contact in contacts
+          li.contacts__item
+            .contacts-row
+              .contacts-row__icon-wrap
+                svg.contacts-row__icon
+                  use(xlink:href=`./assets/img/icons/sprite.svg#${contact[0]}`)
+              .contacts-row__content #{contact[1]}
+    footer.footer.footer_about
       include ../common/footer-main
       include ../common/footer-copyright

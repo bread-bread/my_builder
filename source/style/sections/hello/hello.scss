@@ -178,7 +178,10 @@
     height: 45px;
     width: 295px;
     border: none;
-    outline-color: $blue;
+    transition: 0.2s;
+    &:focus {
+        border: 1px solid $blue;
+    }
     padding: 15px 20px;
     color: rgba(#373e42, .5);
     @include roboto(regular);
